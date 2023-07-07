@@ -1,0 +1,402 @@
+<svg width="100%" height="100%" viewBox="0 0 768 751" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8">
+    <path class="line1" d="M607.918 984.899C604.022 983.353 600.653 980.739 598.179 977.333L201.669 430.948C198.191 426.16 196.789 420.303 197.721 414.449C198.652 408.596 201.799 403.451 206.582 399.965L752.699 1.94948C758.868 -2.54754 766.795 -3.55547 773.889 -0.745295C777.785 0.801168 781.154 3.41537 783.628 6.82101L1180.13 553.196C1183.61 557.984 1185.01 563.841 1184.08 569.695C1183.16 575.551 1180 580.693 1175.22 584.179L629.102 982.195C622.934 986.692 615.014 987.702 607.91 984.897L607.918 984.899ZM773.234 0.907526C766.707 -1.67353 759.412 -0.745013 753.74 3.39395L207.626 401.402C203.221 404.605 200.325 409.34 199.472 414.724C198.62 420.108 199.911 425.497 203.109 429.898L599.611 976.28C601.888 979.419 604.982 981.822 608.567 983.237C615.102 985.82 622.389 984.889 628.066 980.76L1174.18 582.742C1178.58 579.532 1181.48 574.804 1182.33 569.413C1183.18 564.028 1181.89 558.64 1178.7 554.231L782.193 7.85621C779.916 4.7175 776.815 2.31175 773.237 0.900085L773.234 0.907526Z" fill="url(#paint0_linear_179_8)"/>
+    <path class="line2" d="M586.717 980.685C582.826 979.149 579.487 976.52 577.058 973.08L197.346 435.595C194.015 430.883 192.721 425.145 193.698 419.448C194.675 413.751 197.807 408.766 202.525 405.423L739.736 24.2451C745.719 19.9983 753.367 19.0763 760.188 21.767C764.077 23.3109 767.426 25.9348 769.855 29.3747L1149.57 566.86C1156.44 576.591 1154.12 590.133 1144.4 597.034L607.174 978.217C601.191 982.464 593.543 983.386 586.717 980.685ZM759.531 23.4272C753.267 20.9457 746.248 21.7957 740.75 25.6967L203.546 406.877C199.222 409.943 196.339 414.517 195.442 419.745C194.542 424.98 195.735 430.244 198.793 434.572L578.505 972.058C580.734 975.213 583.801 977.624 587.369 979.04C593.633 981.522 600.652 980.672 606.143 976.768L1143.36 595.592C1152.29 589.251 1154.43 576.828 1148.11 567.898L768.403 30.4121C766.173 27.2566 763.109 24.8389 759.538 23.4298L759.531 23.4272Z" fill="url(#paint1_linear_179_8)"/>
+    <path class="line3" d="M565.518 976.49C561.627 974.953 558.31 972.307 555.933 968.836L193.022 440.242C186.441 430.655 188.886 417.486 198.459 410.88L726.765 46.5389C732.564 42.535 739.934 41.6989 746.484 44.2876C750.375 45.8241 753.692 48.4698 756.071 51.9338L1118.98 580.528C1122.17 585.174 1123.36 590.784 1122.33 596.33C1121.3 601.878 1118.18 606.692 1113.55 609.89L585.235 974.246C579.438 978.242 572.065 979.086 565.515 976.497L565.518 976.49ZM745.834 45.9503C739.839 43.5783 733.081 44.3446 727.773 48.0053L199.467 412.346C190.692 418.392 188.463 430.461 194.486 439.242L557.397 967.836C559.577 971.015 562.614 973.44 566.177 974.847C572.173 977.219 578.923 976.45 584.234 972.782L1112.54 608.451C1116.8 605.518 1119.65 601.107 1120.59 596.028C1121.54 590.949 1120.44 585.81 1117.53 581.555L754.614 52.9613C752.432 49.7891 749.402 47.3668 745.834 45.9503Z" fill="url(#paint2_linear_179_8)"/>
+    <path class="line4" d="M544.319 972.293C540.428 970.757 537.141 968.096 534.809 964.591L188.696 444.896C185.655 440.326 184.571 434.843 185.648 429.454C186.726 424.065 189.835 419.411 194.403 416.356L713.811 68.8546C719.424 65.1009 726.519 64.3433 732.79 66.8274C736.678 68.3712 739.968 71.0242 742.3 74.5297L1088.42 594.235C1094.7 603.667 1092.14 616.476 1082.72 622.777L563.298 970.266C557.685 974.02 550.598 974.78 544.319 972.293ZM732.133 68.4627C726.399 66.1976 719.914 66.8929 714.787 70.3181L195.387 417.822C191.215 420.617 188.37 424.865 187.387 429.79C186.404 434.715 187.395 439.727 190.174 443.901L536.29 963.613C538.423 966.81 541.423 969.246 544.978 970.65C550.713 972.915 557.195 972.228 562.325 968.795L1081.73 621.294C1090.34 615.53 1092.68 603.832 1086.94 595.215L740.826 75.5099C738.693 72.3135 735.691 69.8841 732.138 68.4727L732.133 68.4627Z" fill="url(#paint3_linear_179_8)"/>
+    <path class="line5" d="M523.118 968.104C519.229 966.56 515.965 963.883 513.683 960.353L184.372 449.543C181.472 445.046 180.495 439.683 181.625 434.453C182.75 429.213 185.85 424.73 190.345 421.815L700.844 91.158C706.267 87.6446 713.086 86.9654 719.089 89.3401C722.98 90.8766 726.241 93.5614 728.523 97.091L1057.84 607.904C1060.74 612.401 1061.72 617.764 1060.59 623.002C1059.46 628.242 1056.37 632.727 1051.88 635.635L541.367 966.296C535.944 969.81 529.12 970.479 523.115 968.112L523.118 968.104ZM718.437 90.9855C712.959 88.8173 706.739 89.4389 701.798 92.6386L191.299 423.295C187.2 425.95 184.377 430.04 183.356 434.811C182.325 439.587 183.218 444.474 185.858 448.575L515.184 959.391C517.259 962.609 520.231 965.053 523.78 966.454C529.25 968.62 535.469 967.998 540.418 964.801L1050.92 634.137C1055.01 631.479 1057.83 627.389 1058.86 622.621C1059.89 617.845 1059 612.958 1056.36 608.857L727.043 98.0439C724.967 94.8259 721.995 92.382 718.447 90.9806L718.437 90.9855Z" fill="url(#paint4_linear_179_8)"/>
+    <path class="line6" d="M501.914 963.923C498.015 962.384 494.783 959.685 492.566 956.111L180.04 454.187C174.353 445.058 177.157 432.981 186.279 427.271L687.883 113.447C693.107 110.171 699.656 109.58 705.39 111.846C709.288 113.385 712.52 116.084 714.74 119.65L1027.26 621.579C1030.02 626.002 1030.88 631.243 1029.7 636.324C1028.52 641.412 1025.44 645.737 1021.02 648.495L519.43 962.317C514.198 965.59 507.655 966.191 501.916 963.915L501.914 963.923ZM704.743 113.501C699.526 111.439 693.575 111.98 688.819 114.954L187.218 428.771C178.92 433.964 176.374 444.938 181.543 453.241L494.074 955.176C496.092 958.415 499.027 960.871 502.568 962.27C507.785 964.331 513.736 963.791 518.492 960.817L1020.1 646.992C1024.12 644.477 1026.92 640.545 1027.99 635.931C1029.06 631.309 1028.27 626.542 1025.77 622.529L713.244 120.598C711.226 117.358 708.284 114.9 704.743 113.501Z" fill="url(#paint5_linear_179_8)"/>
+    <path class="line7" d="M480.711 959.734C476.813 958.195 473.613 955.474 471.441 951.867L175.715 458.834C173.106 454.479 172.346 449.373 173.572 444.441C174.798 439.509 177.877 435.35 182.22 432.73L674.918 135.743C680.034 132.661 686.148 132.152 691.7 134.346C695.606 135.888 698.805 138.609 700.968 142.221L996.693 635.254C1002.08 644.238 999.159 655.943 990.188 661.358L497.49 958.345C492.374 961.426 486.26 961.936 480.701 959.739L480.711 959.734ZM691.053 136.001C686.018 134.012 680.477 134.47 675.842 137.263L183.136 434.248C179.191 436.625 176.412 440.399 175.298 444.864C174.181 449.337 174.874 453.965 177.243 457.913L472.958 950.951C474.924 954.222 477.822 956.69 481.356 958.086C486.39 960.076 491.942 959.613 496.569 956.818L989.275 659.833C997.416 654.926 1000.06 644.316 995.175 636.17L699.45 143.137C697.492 139.868 694.586 137.398 691.045 135.999L691.053 136.001Z" fill="url(#paint6_linear_179_8)"/>
+    <path class="line8" d="M459.505 955.56C455.599 954.018 452.427 951.265 450.32 947.614L171.392 463.48C168.93 459.201 168.278 454.216 169.557 449.443C170.838 444.662 173.9 440.671 178.174 438.201L661.964 158.059C666.885 155.208 672.731 154.78 678.014 156.864C681.917 158.413 685.094 161.151 687.202 164.803L966.124 648.951C968.596 653.225 969.245 658.218 967.967 662.991C966.681 667.762 963.624 671.762 959.349 674.232L475.554 954.365C470.634 957.216 464.788 957.644 459.505 955.56ZM677.364 158.502C672.586 156.609 667.298 157.006 662.856 159.576L179.056 439.723C175.185 441.96 172.419 445.573 171.264 449.893C170.11 454.212 170.695 458.719 172.927 462.587L451.852 946.728C453.758 950.029 456.626 952.511 460.16 953.907C464.937 955.8 470.226 955.403 474.668 952.834L958.465 672.693C962.329 670.454 965.095 666.841 966.257 662.524C967.419 658.207 966.823 653.705 964.602 649.832L685.669 165.688C683.771 162.39 680.898 159.898 677.369 158.512L677.364 158.502Z" fill="url(#paint7_linear_179_8)"/>
+    <path class="line9" d="M438.298 951.386C434.437 949.86 431.206 947.012 429.195 943.369L167.063 468.117C164.742 463.912 164.197 459.046 165.531 454.424C166.865 449.803 169.912 445.973 174.114 443.643L649.006 180.34C653.72 177.724 659.303 177.362 664.323 179.347C668.184 180.873 671.414 183.721 673.425 187.364L935.558 662.616C937.872 666.819 938.419 671.677 937.09 676.309C935.756 680.93 932.708 684.76 928.507 687.09L453.608 950.391C448.893 953.007 443.31 953.368 438.298 951.386ZM663.67 180.992C659.146 179.204 654.113 179.532 649.862 181.886L174.965 445.204C171.174 447.304 168.433 450.751 167.231 454.921C166.031 459.084 166.519 463.467 168.61 467.261L430.749 942.516C432.562 945.8 435.476 948.365 438.95 949.741C443.474 951.529 448.507 951.201 452.759 948.847L927.653 685.537C931.436 683.435 934.185 679.99 935.387 675.819C936.587 671.656 936.099 667.274 934.008 663.479L671.876 188.227C670.064 184.943 667.152 182.371 663.675 181.002L663.67 180.992Z" fill="url(#paint8_linear_179_8)"/>
+    <path class="line10" d="M417.086 947.227C413.218 945.698 410.015 942.819 408.071 939.125L162.739 472.764C160.565 468.634 160.126 463.896 161.515 459.426C162.904 454.956 165.935 451.294 170.06 449.112L636.049 202.639C640.571 200.246 645.88 199.955 650.639 201.833C654.508 203.362 657.71 206.241 659.654 209.935L904.986 676.296C909.472 684.826 906.19 695.438 897.665 699.948L431.676 946.421C427.157 948.807 421.837 949.102 417.089 947.22L417.086 947.227ZM649.984 203.486C645.714 201.801 640.936 202.061 636.873 204.207L170.884 450.68C167.174 452.642 164.445 455.936 163.204 459.953C161.964 463.969 162.354 468.227 164.308 471.941L409.642 938.294C411.385 941.612 414.259 944.196 417.741 945.574C422.011 947.259 426.789 946.999 430.852 944.853L896.841 698.38C904.502 694.333 907.455 684.791 903.422 677.129L658.083 210.766C656.34 207.448 653.466 204.864 649.984 203.486Z" fill="url(#paint9_linear_179_8)"/>
+    <path class="line11" d="M395.867 943.065C391.983 941.531 388.816 938.622 386.947 934.88L158.41 477.401C154.222 469.015 157.631 458.778 166.002 454.571L623.092 224.937C627.411 222.772 632.46 222.54 636.955 224.319C640.838 225.852 644.013 228.764 645.882 232.507L874.421 689.978C878.612 698.357 875.208 708.604 866.83 712.808L409.729 942.447C405.418 944.614 400.361 944.844 395.867 943.065ZM636.297 225.979C632.276 224.389 627.752 224.587 623.884 226.527L166.796 456.154C159.296 459.925 156.246 469.102 159.993 476.607L388.532 934.079C390.205 937.431 393.047 940.037 396.521 941.412C400.55 943.005 405.067 942.804 408.938 940.857L866.026 711.23C873.525 707.458 876.576 698.282 872.828 690.776L644.289 233.305C642.616 229.953 639.774 227.347 636.293 225.969L636.297 225.979Z" fill="url(#paint10_linear_179_8)"/>
+    <path class="line12" d="M374.653 938.913C370.75 937.364 367.617 934.426 365.818 930.625L154.079 482.045C150.194 473.813 153.728 463.934 161.951 460.032L610.144 247.238C614.257 245.283 619.041 245.125 623.274 246.797C627.18 248.338 630.317 251.286 632.109 255.085L843.848 703.665C847.733 711.897 844.199 721.776 835.976 725.678L387.791 938.474C383.678 940.429 378.887 940.585 374.653 938.913ZM622.612 248.447C618.832 246.949 614.566 247.096 610.891 248.838L162.708 461.627C155.365 465.113 152.215 473.933 155.687 481.276L367.423 929.864C369.024 933.257 371.826 935.882 375.308 937.26C379.083 938.748 383.356 938.604 387.032 936.862L835.221 724.076C842.564 720.589 845.715 711.77 842.238 704.416L630.499 255.836C628.898 252.443 626.096 249.818 622.615 248.44L622.612 248.447Z" fill="url(#paint11_linear_179_8)"/>
+    <path class="line13" d="M353.436 934.769C349.511 933.212 346.415 930.237 344.704 926.375L149.758 486.684C148.024 482.765 147.91 478.404 149.452 474.401C150.994 470.398 153.992 467.238 157.903 465.486L597.187 269.537C601.155 267.763 605.559 267.673 609.595 269.268C613.52 270.824 616.623 273.802 618.335 277.664L813.281 717.355C816.863 725.432 813.208 734.946 805.138 738.545L365.844 934.5C361.879 936.266 357.472 936.364 353.436 934.769ZM608.94 270.92C605.348 269.504 601.436 269.583 597.901 271.158L158.625 467.11C155.15 468.656 152.477 471.474 151.106 475.031C149.734 478.588 149.832 482.471 151.377 485.953L346.313 925.649C347.839 929.091 350.594 931.732 354.091 933.116C357.676 934.53 361.595 934.454 365.122 932.876L804.409 736.919C811.588 733.715 814.836 725.261 811.652 718.066L616.705 278.375C615.185 274.943 612.425 272.292 608.936 270.911L608.94 270.92Z" fill="url(#paint12_linear_179_8)"/>
+    <path class="line14" d="M332.217 930.631C328.269 929.067 325.199 926.043 323.577 922.113L145.429 491.321C142.152 483.39 145.927 474.249 153.852 470.947L584.233 291.828C587.985 290.27 592.134 290.223 595.914 291.721C599.862 293.285 602.932 296.309 604.556 300.232L782.709 731.034C785.986 738.965 782.204 748.103 774.279 751.405L343.898 930.525C340.143 932.09 335.989 932.127 332.209 930.629L332.217 930.631ZM595.26 293.374C591.908 292.049 588.237 292.079 584.908 293.468L154.526 472.588C147.502 475.514 144.154 483.611 147.055 490.642L325.211 921.436C326.65 924.914 329.367 927.593 332.871 928.979C336.215 930.301 339.896 930.266 343.223 928.884L773.604 749.764C780.629 746.838 783.974 738.749 781.068 731.708L602.922 300.909C601.483 297.431 598.761 294.743 595.262 293.367L595.26 293.374Z" fill="url(#paint13_linear_179_8)"/>
+    <path class="line15" d="M310.992 926.509C307.067 924.953 303.956 921.807 302.453 917.868L141.1 495.958C139.665 492.183 139.77 488.072 141.41 484.384C143.053 480.689 146.035 477.863 149.801 476.409L571.281 314.136C574.826 312.772 578.722 312.786 582.241 314.178C586.161 315.724 589.276 318.88 590.787 322.821L752.132 744.729C755.112 752.515 751.202 761.279 743.432 764.278L321.951 926.551C318.406 927.916 314.518 927.903 310.992 926.509ZM581.593 315.833C578.484 314.6 575.043 314.585 571.919 315.789L150.438 478.062C147.115 479.338 144.486 481.839 143.036 485.096C141.584 488.36 141.481 491.984 142.756 495.314L304.106 917.231C305.438 920.706 308.187 923.486 311.647 924.857C314.756 926.09 318.189 926.102 321.321 924.901L742.804 762.62C749.665 759.977 753.113 752.237 750.487 745.368L589.141 323.461C587.811 319.979 585.063 317.199 581.601 315.835L581.593 315.833Z" fill="url(#paint14_linear_179_8)"/>
+    <path class="line16" d="M289.758 922.392C285.8 920.832 282.727 917.625 281.327 913.606L136.774 500.587C135.479 496.886 135.704 492.907 137.4 489.371C139.095 485.835 142.063 483.169 145.76 481.866L558.338 336.423C561.667 335.248 565.305 335.315 568.575 336.611C572.53 338.178 575.605 341.378 577.008 345.39L721.566 758.419C724.235 766.048 720.203 774.446 712.58 777.14L300.002 922.583C296.665 923.755 293.027 923.689 289.758 922.392ZM567.918 338.272C565.039 337.135 561.84 337.071 558.915 338.104L146.348 483.543C143.102 484.688 140.487 487.029 138.997 490.139C137.507 493.25 137.307 496.748 138.444 499.998L282.997 913.016C284.234 916.549 286.93 919.361 290.412 920.739C293.29 921.876 296.482 921.937 299.415 920.906L711.989 775.471C718.696 773.105 722.244 765.723 719.889 759.006L575.336 345.987C574.098 342.454 571.395 339.64 567.92 338.264L567.918 338.272Z" fill="url(#paint15_linear_179_8)"/>
+    <path class="line17" d="M268.528 918.284C264.529 916.702 261.499 913.443 260.2 909.343L132.445 505.224C130.081 497.742 134.243 489.711 141.717 487.329L545.386 358.731C548.496 357.737 551.885 357.85 554.906 359.052C558.906 360.635 561.936 363.893 563.234 367.993L690.987 772.12C693.351 779.602 689.189 787.633 681.723 790.017L278.056 918.608C274.938 919.6 271.559 919.482 268.528 918.284ZM554.264 360.693C551.613 359.643 548.649 359.545 545.924 360.407L142.25 489.021C135.707 491.103 132.067 498.131 134.137 504.691L261.892 908.811C263.027 912.399 265.683 915.255 269.18 916.639C271.831 917.689 274.788 917.784 277.523 916.917L681.202 788.314C687.745 786.231 691.385 779.204 689.312 772.65L561.552 368.521C560.417 364.932 557.758 362.084 554.262 360.7L554.264 360.693Z" fill="url(#paint16_linear_179_8)"/>
+    <path class="line18" d="M247.285 914.189C243.249 912.594 240.249 909.271 239.081 905.084L128.119 509.853C126.06 502.518 130.348 494.862 137.675 492.786L532.449 381.02C535.386 380.19 538.432 380.341 541.258 381.46C545.302 383.057 548.294 386.377 549.472 390.56L660.429 785.805C662.488 793.14 658.2 800.796 650.875 802.865L256.102 914.631C253.164 915.461 250.119 915.31 247.285 914.189ZM540.603 383.112C538.142 382.137 535.48 382.002 532.928 382.725L138.154 494.491C131.765 496.296 128.032 502.969 129.827 509.368L240.787 904.606C241.81 908.255 244.421 911.145 247.94 912.536C250.402 913.512 253.056 913.644 255.618 912.916L650.39 801.157C656.778 799.352 660.511 792.68 658.716 786.28L547.757 391.042C546.733 387.394 544.122 384.504 540.596 383.11L540.603 383.112Z" fill="url(#paint17_linear_179_8)"/>
+    <path class="line19" d="M226.046 910.111C222.009 908.516 218.986 905.045 217.962 900.824L123.793 514.483C122.039 507.295 126.454 500.014 133.632 498.25L519.497 403.329C522.213 402.662 525.015 402.845 527.6 403.872C531.636 405.467 534.659 408.938 535.683 413.158L629.85 799.507C631.596 806.693 627.188 813.976 620.011 815.74L234.145 910.662C231.43 911.328 228.63 911.138 226.043 910.119L226.046 910.111ZM526.955 405.519C524.713 404.628 522.284 404.466 519.921 405.048L134.048 499.967C127.821 501.497 123.993 507.822 125.515 514.052L219.675 900.399C220.569 904.061 223.196 907.072 226.693 908.456C228.938 909.34 231.366 909.502 233.719 908.925L619.592 814.006C625.812 812.473 629.644 806.158 628.125 799.921L533.966 413.574C533.071 409.912 530.452 406.903 526.948 405.517L526.955 405.519Z" fill="url(#paint18_linear_179_8)"/>
+    <path class="line20" d="M204.793 906.046C200.692 904.42 197.717 900.883 196.835 896.562L119.468 519.105C118.027 512.067 122.57 505.161 129.598 503.71L506.565 425.628C509.053 425.114 511.613 425.329 513.966 426.259C518.059 427.882 521.039 431.429 521.924 435.742L599.29 813.2C600.734 820.231 596.189 827.144 589.161 828.595L212.183 906.682C209.695 907.195 207.139 906.973 204.785 906.043L204.793 906.046ZM513.304 427.909C511.278 427.109 509.068 426.916 506.917 427.364L129.95 505.446C123.882 506.707 119.956 512.668 121.2 518.744L198.567 896.201C199.329 899.934 201.904 903.001 205.445 904.4C207.478 905.203 209.681 905.394 211.832 904.946L588.802 826.856C594.87 825.595 598.795 819.634 597.544 813.556L520.177 436.098C519.415 432.366 516.845 429.308 513.297 427.907L513.304 427.909Z" fill="url(#paint19_linear_179_8)"/>
+    <path class="line21" d="M183.533 902.002C179.425 900.374 176.428 896.663 175.709 892.3L115.145 523.727C114.015 516.845 118.686 510.307 125.565 509.169L493.627 447.924C495.893 447.549 498.202 447.793 500.321 448.633C504.429 450.262 507.424 453.98 508.145 458.336L568.712 826.901C569.842 833.783 565.173 840.313 558.292 841.459L190.23 902.704C187.964 903.079 185.655 902.835 183.533 902.002ZM499.667 450.286C497.846 449.565 495.856 449.357 493.914 449.679L125.845 510.921C119.931 511.905 115.918 517.52 116.884 523.442L177.46 892.003C178.088 895.813 180.598 898.925 184.188 900.349C186.009 901.07 187.999 901.278 189.948 900.959L558.012 839.707C563.919 838.72 567.939 833.108 566.963 827.19L506.397 458.625C505.769 454.815 503.259 451.703 499.669 450.279L499.667 450.286Z" fill="url(#paint20_linear_179_8)"/>
+    <path class="line22" d="M162.26 897.971C158.071 896.315 155.134 892.5 154.585 888.03L110.814 528.346C109.996 521.614 114.8 515.461 121.524 514.625L480.69 470.213C482.722 469.964 484.801 470.227 486.688 470.971C490.877 472.628 493.825 476.437 494.361 480.919L538.135 840.596C538.953 847.328 534.157 853.483 527.427 854.31L168.266 898.732C166.234 898.981 164.155 898.717 162.26 897.971ZM486.031 472.632C484.415 471.99 482.635 471.771 480.895 471.989L121.739 516.397C115.986 517.105 111.878 522.373 112.576 528.136L156.352 887.806C156.817 891.634 159.332 894.896 162.917 896.311C164.534 896.953 166.311 897.178 168.051 896.961L527.214 852.555C532.967 851.847 537.075 846.579 536.377 840.816L492.611 481.142C492.139 477.311 489.624 474.048 486.041 472.627L486.031 472.632Z" fill="url(#paint21_linear_179_8)"/>
+</g>
+<defs>
+    <linearGradient id="paint0_linear_179_8" x1="254.887" y1="804.51" x2="1120.41" y2="140.452" gradientUnits="userSpaceOnUse">
+        <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint1_linear_179_8" x1="247.529" y1="806.433" x2="1093.03" y2="157.747" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint2_linear_179_8" x1="240.171" y1="808.38" x2="1065.66" y2="175.064" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint3_linear_179_8" x1="232.803" y1="810.309" x2="1038.25" y2="192.342" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint4_linear_179_8" x1="225.431" y1="812.258" x2="1010.88" y2="209.639" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint5_linear_179_8" x1="218.062" y1="814.194" x2="983.512" y2="226.934" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint6_linear_179_8" x1="210.671" y1="816.144" x2="956.145" y2="244.215" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint7_linear_179_8" x1="203.3" y1="818.094" x2="928.776" y2="261.49" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint8_linear_179_8" x1="195.907" y1="820.043" x2="901.421" y2="278.761" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint9_linear_179_8" x1="188.518" y1="822.001" x2="874.078" y2="296.045" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint10_linear_179_8" x1="181.119" y1="823.97" x2="846.737" y2="313.315" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint11_linear_179_8" x1="173.712" y1="825.936" x2="819.394" y2="330.579" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint12_linear_179_8" x1="166.295" y1="827.907" x2="792.057" y2="347.829" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint13_linear_179_8" x1="158.879" y1="829.885" x2="764.742" y2="365.088" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint14_linear_179_8" x1="151.438" y1="831.87" x2="737.412" y2="382.322" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint15_linear_179_8" x1="144" y1="833.862" x2="710.116" y2="399.559" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint16_linear_179_8" x1="136.556" y1="835.859" x2="682.813" y2="416.792" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint17_linear_179_8" x1="129.093" y1="837.866" x2="655.539" y2="433.999" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint18_linear_179_8" x1="121.612" y1="839.888" x2="628.261" y2="451.212" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint19_linear_179_8" x1="114.128" y1="841.909" x2="601.005" y2="468.395" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint20_linear_179_8" x1="106.621" y1="843.95" x2="573.763" y2="485.584" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+        <linearGradient id="paint21_linear_179_8" x1="99.0912" y1="845.999" x2="546.546" y2="502.748" gradientUnits="userSpaceOnUse">
+            <stop offset="0.193622" stop-color="#DB7F0E">
+            <animate attributeName="stop-color" values="#DB7F0E; #1D53EB; #DB7F0E" dur="4s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.510756" stop-color="#1D53EB">
+            <animate attributeName="stop-color" values="#1D53EB; #FD9F2B; #1D53EB" dur="5s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.64506" stop-color="#FD9F2B">
+            <animate attributeName="stop-color" values="#FD9F2B; #1D53EB; #FD9F2B" dur="6s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.783616" stop-color="#204ECF">
+            <animate attributeName="stop-color" values="#204ECF; #FD9F2B; #204ECF" dur="7s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset="0.928097" stop-color="#2051DA">
+            <animate attributeName="stop-color" values="#2051DA; #204ECF; 2051DA" dur="8s" repeatCount="indefinite"></animate>
+        </stop>
+        </linearGradient>
+    </defs>
+</svg>
