@@ -54,4 +54,35 @@ export default class GraphAPI {
     });
   }
 
+
+  static homePage() {
+    const homeQuery = `
+    query homeQuery {
+      pageBy(pageId: 69) {
+        homepage {
+          textLine1
+          textLine2
+          textLine3
+          textLine4
+        }
+      }
+    }
+        `;
+    const graphqlQuery = {
+      operationName: "homeQuery",
+      query: homeQuery,
+    };
+    console.log("axios...",axios({
+        url: baseURL,
+        method: "post",
+        headers: headers,
+        data: graphqlQuery,
+      }));
+    return axios({
+      url: baseURL,
+      method: "post",
+      headers: headers,
+      data: graphqlQuery,
+    });
+  }
 }
