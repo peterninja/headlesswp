@@ -9,6 +9,7 @@ import GraphAPI from '@/service/graphQL'
 
 export default function Home({themeoptions,homepagedata}:any) {
     const homedata = homepagedata.pageBy.homepage;
+    console.log(homedata);
   return (
     <>
       <Header themeoptions={themeoptions}/>
@@ -53,7 +54,7 @@ export default function Home({themeoptions,homepagedata}:any) {
 
                 <div className="col-xl-3 col-lg-4">
                     <div className="who-we-img wrapper-gsap" data-aos="fade" data-aos-delay="50">
-                        <img src="assets/images/img1.webp" alt=""/>
+                        <img src="/assets/images/img1.webp" alt=""/>
                         <div className="cover"></div>
                         <div className="counters p-xl-4 p-md-3 p-2" id="counter">
                             <div className="counter-info">
