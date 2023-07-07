@@ -44,7 +44,7 @@ function Footer({themeoptions}:any) {
             setFooterServices(json);
         })
      },[]);
-
+    //  console.log(menus_footer);
     const data = themeoptions.themeOptionSettings.themeOptions;
     return(
         <>
@@ -81,7 +81,7 @@ function Footer({themeoptions}:any) {
                                 <ul>
                                     {menus_services.map((menus_service: any, index) => {
                                         return (
-                                        <li className="nav-item">
+                                        <li className="nav-item" key={menus_service.ID}>
                                             <a href={menus_service.url}>{menus_service.title}</a>
                                         </li>
                                         );
@@ -97,7 +97,7 @@ function Footer({themeoptions}:any) {
                                 <ul>
                                     {menus_footer.map((menu_footer: any, index) => {
                                         return (
-                                            <li className="nav-item">
+                                            <li className="nav-item" key={menu_footer.ID}>
                                                 <a href={menu_footer.url}>{menu_footer.title}</a>
                                             </li>
                                         );
@@ -113,7 +113,7 @@ function Footer({themeoptions}:any) {
                                 <ul>
                                     {menus_footer_technology.map((menus_footer_technology_single: any, index) => {
                                         return (
-                                            <li className="nav-item">
+                                            <li className="nav-item" key={menus_footer_technology_single.ID}>
                                                 <a href={menus_footer_technology_single.url}>{menus_footer_technology_single.title}</a>
                                             </li>
                                         );
@@ -129,7 +129,7 @@ function Footer({themeoptions}:any) {
                                 <ul>
                                 {menus.map((menu: any, index) => {
                                         return (
-                                       <li className="nav-item">
+                                       <li className="nav-item" key={menu.ID}>
                                         <a href={menu.url}>{menu.title}</a>
                                        </li>
                                        );
