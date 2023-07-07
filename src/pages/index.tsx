@@ -8,26 +8,24 @@ import GraphAPI from '@/service/graphQL'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({themeoptions,homepagedata}:any) {
-    console.log(homepagedata.pageBy.homepage);
+    const homedata = homepagedata.pageBy.homepage;
   return (
     <>
       <Header themeoptions={themeoptions}/>
-
       <section className="hero-banner">
         <div className="container">
             <div className="row justify-content-md-between justify-content-center align-items-center">
                 <div className="col-md-10" data-aos="fade" data-aos-delay="50">
                     <h1>
-                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-1 d-inline-block">Revolutionizing</span></span> <span className="overflow-hidden d-inline-block title-one pb-1"><span className="overflow-hidden text-ani-one">the way</span> </span>
-                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-2 d-inline-block">businesses operate in the</span></span> 
-                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-3 d-inline-block">digital world with &ensp;</span></span>
-                        <span className="overflow-hidden d-block"><span className="anim-gsap-4 d-inline-block"><strong><span id="changingword">Software Development</span></strong></span></span>
+                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-1 d-inline-block">{homedata.textLine1}</span></span> <span className="overflow-hidden d-inline-block title-one pb-1"><span className="overflow-hidden text-ani-one">the way</span> </span>
+                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-2 d-inline-block">{homedata.textLine2}</span></span> 
+                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-3 d-inline-block">{homedata.textLine3}</span></span>
+                        <span className="overflow-hidden d-block"><span className="anim-gsap-4 d-inline-block"><strong><span id="changingword">{homedata.textLine4}</span></strong></span></span>
                     </h1>
                 </div>
             </div>
         </div>
       </section>
-    
       <section>
         <div className="container">
             <div className="row">
