@@ -65,6 +65,9 @@ export default class GraphAPI {
           textLine3
           textLine4
           textLine5
+          wDescription
+          wHeading
+          wSubHeading
         }
       }
     }
