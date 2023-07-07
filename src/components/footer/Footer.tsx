@@ -8,7 +8,7 @@ function Footer({themeoptions}:any) {
    const [menus_footer_technology,setFooterTechnology] = useState([]);
    const [menus_services,setFooterServices] = useState([]);
    useEffect(() => {
-      fetch('http://localhost/headless-wp/wp-json/menu/footer_company')
+      fetch('http://209.182.213.242/~ninjatech/wordpress_demo/wp-json/menu/footer_company')
       .then((response) => response.json())
       .then((json) =>{
          setMenu(json);
@@ -17,7 +17,7 @@ function Footer({themeoptions}:any) {
     // console.log(menus);
 
     useEffect(() => {
-        fetch('http://localhost/headless-wp/wp-json/menu/footer_hire_developer_team')
+        fetch('http://209.182.213.242/~ninjatech/wordpress_demo/wp-json/menu/footer_hire_developer_team')
         .then((response) => response.json())
         .then((json) =>{
             setFooterMenu(json);
@@ -25,7 +25,7 @@ function Footer({themeoptions}:any) {
      },[]);
 
      useEffect(() => {
-        fetch('http://localhost/headless-wp/wp-json/menu/footer_technology_expertise')
+        fetch('http://209.182.213.242/~ninjatech/wordpress_demo/wp-json/menu/footer_technology_expertise')
         .then((response) => response.json())
         .then((json) =>{
             setFooterTechnology(json);
@@ -33,7 +33,7 @@ function Footer({themeoptions}:any) {
      },[]);
 
      useEffect(() => {
-        fetch('http://localhost/headless-wp/wp-json/menu/footer_services')
+        fetch('http://209.182.213.242/~ninjatech/wordpress_demo/wp-json/menu/footer_services')
         .then((response) => response.json())
         .then((json) =>{
             setFooterServices(json);

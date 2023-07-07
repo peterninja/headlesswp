@@ -9,7 +9,7 @@ export default function Header({themeoptions}:any) {
    
     const [Headermenu,setHeaderMenu] = useState([]);
     useEffect(() => {
-        fetch('http://localhost/headless-wp/wp-json/menu/primary')
+        fetch('http://209.182.213.242/~ninjatech/wordpress_demo/wp-json/menu/primary')
         .then((response) => response.json())
         .then((json) =>{
             setHeaderMenu(json);

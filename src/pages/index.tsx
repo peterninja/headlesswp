@@ -12,7 +12,62 @@ export default function Home({themeoptions}:any) {
   return (
     <>
       <Header themeoptions={themeoptions}/>
-      <section className="section-space pt-0">
+
+      <section className="hero-banner">
+        <div className="container">
+            <div className="row justify-content-md-between justify-content-center align-items-center">
+                <div className="col-md-10" data-aos="fade" data-aos-delay="50">
+                    <h1>
+                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-1 d-inline-block">Revolutionizing</span></span> <span className="overflow-hidden d-inline-block title-one pb-1"><span className="overflow-hidden text-ani-one">the way</span> </span>
+                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-2 d-inline-block">businesses operate in the</span></span> 
+                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-3 d-inline-block">digital world with &ensp;</span></span>
+                        <span className="overflow-hidden d-block"><span className="anim-gsap-4 d-inline-block"><strong><span id="changingword">Software Development</span></strong></span></span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+      </section>
+    
+      <section>
+        <div className="container">
+            <div className="row">
+                <div className="col-xl-9 col-lg-8">
+                    <div className="who-we-info secondary-light-bg">
+                        <h2 data-aos="fade-up">Who we are</h2>
+                        <h3 data-aos="fade-up">A full-service global digital commerce agency for progressive brands</h3>
+                        <p data-aos="fade-up">Since 2003, we are unlearning, relearning, and integrating the art of commerce. With industry-defining commerce capabilities across planning, designing, development, deployment, and marketing we aim to provide peerless and personalized digital commerce solutions. </p>
+                        <p data-aos="fade-up">We are known for our expertise and experience in catering to the leading B2B, B2C, and D2C brands worldwide.</p>
+                    </div>
+                </div>
+
+                <div className="col-xl-3 col-lg-4">
+                    <div className="who-we-img wrapper-gsap" data-aos="fade" data-aos-delay="50">
+                        <img src="assets/images/img1.webp" alt=""/>
+                        <div className="cover"></div>
+                        <div className="counters p-xl-4 p-md-3 p-2" id="counter">
+                            <div className="counter-info">
+                                <div className="number"><span className="counter-value" data-count="15">0</span>+</div>
+                                <div className="counter-name">Industries Served</div>
+                            </div>
+                            <div className="counter-info">
+                                <div className="number"><span className="counter-value" data-count="12">0</span>+</div>
+                                <div className="counter-name">Yrs of Experience</div>
+                            </div>
+                            <div className="counter-info">
+                                <div className="number"><span className="counter-value" data-count="200">0</span>+</div>
+                                <div className="counter-name">Global Team</div>
+                            </div>
+                            <div className="counter-info">
+                                <div className="number"><span className="counter-value" data-count="550">0</span>+</div>
+                                <div className="counter-name">Storefronts Launched</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      {/* <section className="section-space pt-0">
         <div className="container">
             <div className="row d-none d-md-block">
                 <div className="col-12">
@@ -56,22 +111,9 @@ export default function Home({themeoptions}:any) {
                 
             </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="hero-banner">
-        <div className="container">
-            <div className="row justify-content-md-between justify-content-center align-items-center">
-                <div className="col-md-10" data-aos="fade" data-aos-delay="50">
-                    <h1>
-                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-1 d-inline-block">Revolutionizing</span></span> <span className="overflow-hidden d-inline-block title-one pb-1"><span className="overflow-hidden text-ani-one">the way</span> </span>
-                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-2 d-inline-block">businesses operate in the</span></span> 
-                        <span className="overflow-hidden d-inline-block"><span className="anim-gsap-3 d-inline-block">digital world with &ensp;</span></span>
-                        <span className="overflow-hidden d-block"><span className="anim-gsap-4 d-inline-block"><strong><span id="changingword">Software Development</span></strong></span></span>
-                    </h1>
-                </div>
-            </div>
-        </div>
-      </section>      
+            
       <Footer themeoptions={themeoptions}/>
     </>
   )
