@@ -8,7 +8,7 @@ import GraphAPI from '@/service/graphQL'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({themeoptions,homepagedata}:any) {
-    console.log(homepagedata);
+    console.log(homepagedata.pageBy.homepage);
   return (
     <>
       <Header themeoptions={themeoptions}/>
