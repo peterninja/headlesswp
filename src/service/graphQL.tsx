@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "http://209.182.213.242/~ninjatech/wordpress_demo/graphql";
+const baseURL = "https://dev-headlesswp.pantheonsite.io/graphql";
 const headers = {
   "content-type": "application/json",
 };
