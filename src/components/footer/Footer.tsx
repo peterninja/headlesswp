@@ -1,10 +1,5 @@
-import { useRouter } from "next/router";
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-import axios from "axios";
 const baseURL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
-import GraphAPI from "@/service/graphQL";
 import { useEffect, useState } from 'react';
-import { Link, NavLink } from "react-router-dom";
 
 function Footer({themeoptions}:any) {
 
