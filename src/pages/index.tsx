@@ -7,8 +7,8 @@ import GraphAPI from '@/service/graphQL'
 
 // const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({themeoptions,homePage}:any) {
-    console.log(homePage);
+export default function Home({themeoptions,homepagedata}:any) {
+    console.log(homepagedata);
   return (
     <>
       <Header themeoptions={themeoptions}/>
@@ -122,10 +122,11 @@ export default function Home({themeoptions,homePage}:any) {
 
 export async function getStaticProps() {
     const themeOptions = await GraphAPI.themeOptions();
-    // const themeOption = await themeOptions.json();
+    const homepagedata = await GraphAPI.homePage();
     return {
         props: {
             themeoptions: themeOptions.data.data,
+            homepagedata: homepagedata.data.data
         }
     }
   }
