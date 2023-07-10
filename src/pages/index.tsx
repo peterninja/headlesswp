@@ -61,7 +61,7 @@ export default function Home({themeoptions,homepagedata}:any) {
                         {counterData.map((counterItem: any,index: any) => {
                             console.log(index);
                             return (
-                                <div className="counter-info">
+                                <div className="counter-info" key={index}>
                                     <div className="number"><span className="counter-value" data-count={counterItem.counterNumber}>0</span>+</div>
                                     <div className="counter-name">{counterItem.counterName}</div>
                                 </div>
