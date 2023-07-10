@@ -26,7 +26,6 @@ function about({themeoptions}:any) {
                         </span>
                     </h1>
                 </div>
-
                 <div className="col-md-4">
                     <div className="hero-img">
                         <img src="assets/images/hero-shape.svg" alt="img" />
@@ -34,7 +33,6 @@ function about({themeoptions}:any) {
                 </div>
             </div>
         </div>
-
         <div className="top-content mt-3 mt-xl-5">
             <div className="container">
                 <div className="row">
@@ -49,7 +47,6 @@ function about({themeoptions}:any) {
         </>
     )
 }
-
 export async function getStaticProps() {
     const themeOptions = await GraphAPI.themeOptions();
     const homepagedata = await GraphAPI.homePage();

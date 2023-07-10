@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 export default function Header({themeoptions}:any) {
     const [isToggled, setIsToggled] = useState(false);
     const router = useRouter();
-   
     const [Headermenu,setHeaderMenu] = useState([]);
     useEffect(() => {
         fetch('https://dev-headlesswp.pantheonsite.io/wp-json/menu/primary')
@@ -31,7 +30,6 @@ export default function Header({themeoptions}:any) {
         //   ariaExpand.toggleAttribute('true');
         }
      };
-
       useEffect(() => {
         const menuToggle = document.querySelector('header .navbar-toggler');
         const NavBarToggle = document.querySelector('.navbar');
@@ -44,8 +42,7 @@ export default function Header({themeoptions}:any) {
           BodyToggle.addEventListener('click', handleToggleClick);
           NavBarCollapse.addEventListener('click', handleToggleClick);
         //   ariaExpandToggle.addEventListener('click', handleToggleClick);
-        }
-       
+        }       
         return () => {
           if (menuToggle && NavBarToggle && BodyToggle && NavBarCollapse) {
             menuToggle.removeEventListener('click', handleToggleClick);
@@ -56,7 +53,6 @@ export default function Header({themeoptions}:any) {
           }
         };
       }, []);
-
     return(
         <>
         <header>
@@ -174,8 +170,7 @@ export default function Header({themeoptions}:any) {
                 </div>
             </nav>
         </div>
-    </header>
-    
+    </header>   
         </>
     )
 }

@@ -34,18 +34,11 @@ export default class GraphAPI {
         }
         }
     }
-        `;
+      `;
     const graphqlQuery = {
       operationName: "ThemeQuery",
       query: themeQuery,
     };
-    console.log("testing.. ",graphqlQuery);
-    console.log("axios...",axios({
-        url: baseURL,
-        method: "post",
-        headers: headers,
-        data: graphqlQuery,
-      }));
     return axios({
       url: baseURL,
       method: "post",
@@ -53,7 +46,6 @@ export default class GraphAPI {
       data: graphqlQuery,
     });
   }
-
 
   static homePage() {
     const homeQuery = `
@@ -75,6 +67,13 @@ export default class GraphAPI {
           wImage {
             mediaItemUrl
           }
+          iHeading
+          topIndustrySlider {
+            industryName
+          }
+          bottomIndustrySlider {
+            industryName
+          }
         }
       }
     }
@@ -83,12 +82,6 @@ export default class GraphAPI {
       operationName: "homeQuery",
       query: homeQuery,
     };
-    console.log("axios...",axios({
-        url: baseURL,
-        method: "post",
-        headers: headers,
-        data: graphqlQuery,
-      }));
     return axios({
       url: baseURL,
       method: "post",
