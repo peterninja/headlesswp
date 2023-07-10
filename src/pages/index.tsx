@@ -51,29 +51,86 @@ export default function Home({themeoptions,homepagedata}:any) {
                         <p dangerouslySetInnerHTML={{__html:homedata.wDescription}} />
                     </div>
                 </div>
-
                 <div className="col-xl-3 col-lg-4">
                     <div className="who-we-img wrapper-gsap" data-aos="fade" data-aos-delay="50">
                         <img src={homedata.wImage.mediaItemUrl} alt=""/>
-                        <div className="cover"></div>
                         <div className="counters p-xl-4 p-md-3 p-2" id="counter">
-                            
                         {counterData.map((counterItem: any,index: any) => {
                             console.log(index);
                             return (
                                 <div className="counter-info" key={index}>
-                                    <div className="number"><span className="counter-value" data-count={counterItem.counterNumber}>0</span>+</div>
+                                    <div className="number"><span className="counter-value" data-count={counterItem.counterNumber}>{counterItem.counterNumber}</span>+</div>
                                     <div className="counter-name">{counterItem.counterName}</div>
                                 </div>
                                 );
                             })}
-                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section className="section-space pt-5 overflow-hidden">
+        <div className="container-fluid">
+          <div className="row text-center">
+            <div className="col-12 served-industries-outer">
+                <h2>Served Industries</h2>   
+                <div className="swiper-container industry-slide-top mt-xl-5 mt-4">
+                    <div className="swiper-wrapper">
+                        <div className="swiper-slide">
+                            <a className="served-link" href="#">
+                                Healthcare
+                            </a>
+                        </div>
+                        <div className="swiper-slide">
+                            <a className="served-link" href="#">
+                                UI&UX
+                            </a>
+                        </div>
+                        <div className="swiper-slide">
+                            <a className="served-link" href="#">
+                                BRANDING
+                            </a>
+                        </div>
+                        <div className="swiper-slide">
+                            <a className="served-link" href="#">
+                                FRONT-END DEVELOPMENT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="swiper-container industry-slide-bottom mt-4">
+                    <div className="swiper-wrapper">
+                        <div className="swiper-slide">
+                            <a className="served-link" href="#">
+                                Healthcare
+                            </a>
+                        </div>
+                        <div className="swiper-slide">
+                            <a className="served-link" href="#">
+                                UI&UX
+                            </a>
+                        </div>
+                        <div className="swiper-slide">
+                            <a className="served-link" href="#">
+                                BRANDING
+                            </a>
+                        </div>
+                        <div className="swiper-slide">
+                            <a className="served-link" href="#">
+                                FRONT-END DEVELOPMENT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+    </section>
+
       {/* <section className="section-space pt-0">
         <div className="container">
             <div className="row d-none d-md-block">
@@ -118,14 +175,11 @@ export default function Home({themeoptions,homepagedata}:any) {
                 
             </div>
         </div>
-      </section> */}
-
-            
+      </section> */}            
       <Footer themeoptions={themeoptions}/>
     </>
   )
 }
-
 
 export async function getStaticProps() {
     const themeOptions = await GraphAPI.themeOptions();
