@@ -45,7 +45,7 @@ export default function Home({themeoptions,homepagedata}:any) {
             <div className="row">
                 <div className="col-xl-9 col-lg-8">
                     <div className="who-we-info secondary-light-bg">
-                        <h2 data-aos="fade-up">Who we are</h2>
+                        <h2 data-aos="fade-up">{homedata.wHeading}</h2>
                         <h3 data-aos="fade-up">A full-service global digital commerce agency for progressive brands</h3>
                         <p data-aos="fade-up">Since 2003, we are unlearning, relearning, and integrating the art of commerce. With industry-defining commerce capabilities across planning, designing, development, deployment, and marketing we aim to provide peerless and personalized digital commerce solutions. </p>
                         <p data-aos="fade-up">We are known for our expertise and experience in catering to the leading B2B, B2C, and D2C brands worldwide.</p>
