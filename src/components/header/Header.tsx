@@ -26,7 +26,7 @@ export default function Header({themeoptions}:any) {
         if (mainNavigation && NavBar && Body && navbarCollapse) {
           mainNavigation.classList.toggle('active');
           NavBar.classList.toggle('show');
-          Body.classList.toggle('overflow_body');
+        //   Body.classList.toggle('overflow_body');
           navbarCollapse.classList.toggle('show');
         //   ariaExpand.toggleAttribute('true');
         }
