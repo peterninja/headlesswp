@@ -3,44 +3,62 @@ import Image from 'next/image'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import GraphAPI from '@/service/graphQL'
-import SwiperCore from "swiper"
-import Navigation from "swiper"
-import Pagination from "swiper"
-import EffectCreative from "swiper"
-import Autoplay from "swiper"
-import Keyboard from "swiper"
-import Mousewheel from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from 'swiper/modules';
+
 // import { Inter } from 'next/font/google'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({themeoptions,homepagedata}:any) {
+    // const swiper = new Swiper(...);
 
-    SwiperCore.use([
-        Navigation,
-        Pagination,
-        EffectCreative,
-        Autoplay,
-        Keyboard,
-        Mousewheel,
-      ]);
-      var settingsB = {
+ 
+      const settingsTopSlider = {
         // Install modules
-        modules: [Navigation, Pagination, EffectCreative],
-        slidesPerView: 2.6,
+        modules: [Autoplay],
+        // slidesPerView:'auto',
+        // allowTouchMove: false,
         spaceBetween: 20,
+        centeredSlides: true,
+        speed: 6000,
         autoplay: {
-          delay: 10000,
-          disableOnInteraction: false,
+          delay: 1000,
+          
         },
-        pagination: {
-          el: ".swiper-pagination",
-          type: "progressbar",
+        disableOnInteraction: true,
+        breakpoints: {
+            300: {
+              spaceBetween: 10,
+            },
+            767: {
+              spaceBetween: 20,
+            },
+          }
+      };
+
+
+      const settingsBottomSlider = {
+        // Install modules
+        modules: [Autoplay],
+        // slidesPerView:'auto',
+        // allowTouchMove: false,
+        spaceBetween: 20,
+        centeredSlides: true,
+        speed: 6000,
+        autoplay: {
+          delay: 1000,
+          
+          reverseDirection: true
         },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+        disableOnInteraction: true,
+        breakpoints: {
+            300: {
+              spaceBetween: 10,
+            },
+            767: {
+              spaceBetween: 20,
+            },
+          }
       };
     const homedata = homepagedata.pageBy.homepage;
     const counterData = homedata.counter;
@@ -112,39 +130,56 @@ export default function Home({themeoptions,homepagedata}:any) {
                 <h2>Served Industries</h2>  
                 
                 <div className="swiper-container industry-slide-top mt-xl-5 mt-4">
-                    <Swiper className="swiper-wrapper">
+                    <Swiper className="swiper-wrapper" {...settingsTopSlider}>
                         <SwiperSlide>
-                        <div className="swiper-slide">
                             <a className="served-link" href="#">
                                 Healthcare
                             </a>
-                        </div>
-                        <div className="swiper-slide">
-                            <a className="served-link" href="#">
-                                Healthcare
-                            </a>
-                        </div>
                         </SwiperSlide>
-                        {/* <div className="swiper-slide">
+                        <SwiperSlide>
                             <a className="served-link" href="#">
                                 UI&UX
                             </a>
-                        </div>
-                        <div className="swiper-slide">
+                        </SwiperSlide>
+                        <SwiperSlide>
                             <a className="served-link" href="#">
                                 BRANDING
                             </a>
-                        </div>
-                        <div className="swiper-slide">
+                        </SwiperSlide>
+                        <SwiperSlide>
                             <a className="served-link" href="#">
                                 FRONT-END DEVELOPMENT
                             </a>
-                        </div> */}
+                        </SwiperSlide>
                     </Swiper>
                 </div>
 
                 <div className="swiper-container industry-slide-bottom mt-4">
-                    <div className="swiper-wrapper">
+
+                <Swiper className="swiper-wrapper" {...settingsBottomSlider}>
+                <SwiperSlide>
+                            <a className="served-link" href="#">
+                                Healthcare
+                            </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <a className="served-link" href="#">
+                                UI&UX
+                            </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <a className="served-link" href="#">
+                                BRANDING
+                            </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <a className="served-link" href="#">
+                                FRONT-END DEVELOPMENT
+                            </a>
+                        </SwiperSlide>
+                    </Swiper>
+
+                    {/* <div className="swiper-wrapper">
                         <div className="swiper-slide">
                             <a className="served-link" href="#">
                                 Healthcare
@@ -165,7 +200,7 @@ export default function Home({themeoptions,homepagedata}:any) {
                                 FRONT-END DEVELOPMENT
                             </a>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
             </div>
