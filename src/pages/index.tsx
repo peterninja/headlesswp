@@ -55,7 +55,8 @@ export default function Home({themeoptions,homepagedata}:any) {
       };
     const homedata = homepagedata.pageBy.homepage;
     const counterData = homedata.counter;
-    console.log(homedata);
+    const topIndustrySlider = homedata.topIndustrySlider;
+    const bottomIndustrySlider = homedata.bottomIndustrySlider;
   return (
     <>
       <Header themeoptions={themeoptions}/>
@@ -133,15 +134,20 @@ export default function Home({themeoptions,homepagedata}:any) {
         <div className="container-fluid">
           <div className="row text-center">
             <div className="col-12 served-industries-outer">
-                <h2>Served Industries</h2>
+                <h2>{homedata.iHeading}</h2>
                 <div className="swiper-container industry-slide-top mt-xl-5 mt-4">
                     <Swiper className="swiper-wrapper" {...settingsTopSlider}>
-                        <SwiperSlide>
-                            <a className="served-link" href="#">
-                                Healthcare
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
+                            {topIndustrySlider.map((topsliderItem: any,index: any) => {
+                                return(
+                                <SwiperSlide>
+                                    <a className="served-link" href="#">
+                                        {topsliderItem.industryName}
+                                    </a>
+                                </SwiperSlide>
+                                );
+                            })}
+
+                        {/* <SwiperSlide>
                             <a className="served-link" href="#">
                                 UI&UX
                             </a>
@@ -155,17 +161,21 @@ export default function Home({themeoptions,homepagedata}:any) {
                             <a className="served-link" href="#">
                                 FRONT-END DEVELOPMENT
                             </a>
-                        </SwiperSlide>
+                        </SwiperSlide> */}
                     </Swiper>
                 </div>
                 <div className="swiper-container industry-slide-bottom mt-4">
                     <Swiper className="swiper-wrapper" {...settingsBottomSlider}>
-                        <SwiperSlide>
-                            <a className="served-link" href="#">
-                                Healthcare
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
+                            {bottomIndustrySlider.map((bottomsliderItem: any,index: any) => {
+                                return(
+                                <SwiperSlide>
+                                    <a className="served-link" href="#">
+                                        {bottomsliderItem.industryName}
+                                    </a>
+                                </SwiperSlide>
+                                );
+                            })}
+                        {/* <SwiperSlide>
                             <a className="served-link" href="#">
                                 UI&UX
                             </a>
@@ -179,7 +189,7 @@ export default function Home({themeoptions,homepagedata}:any) {
                             <a className="served-link" href="#">
                                 FRONT-END DEVELOPMENT
                             </a>
-                        </SwiperSlide>
+                        </SwiperSlide> */}
                     </Swiper>
                 </div>
             </div>
