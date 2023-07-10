@@ -3,11 +3,46 @@ import Image from 'next/image'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import GraphAPI from '@/service/graphQL'
+import SwiperCore, {
+    Navigation,
+    Pagination,
+    EffectCreative,
+    Autoplay,
+    Keyboard,
+    Mousewheel,
+  } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 // import { Inter } from 'next/font/google'
-
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({themeoptions,homepagedata}:any) {
+
+    SwiperCore.use([
+        Navigation,
+        Pagination,
+        EffectCreative,
+        Autoplay,
+        Keyboard,
+        Mousewheel,
+      ]);
+      var settingsB = {
+        // Install modules
+        modules: [Navigation, Pagination, EffectCreative],
+        slidesPerView: 2.6,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 10000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      };
     const homedata = homepagedata.pageBy.homepage;
     const counterData = homedata.counter;
     console.log(counterData);
@@ -75,15 +110,18 @@ export default function Home({themeoptions,homepagedata}:any) {
         <div className="container-fluid">
           <div className="row text-center">
             <div className="col-12 served-industries-outer">
-                <h2>Served Industries</h2>   
+                <h2>Served Industries</h2>  
+                
                 <div className="swiper-container industry-slide-top mt-xl-5 mt-4">
-                    <div className="swiper-wrapper">
+                    <Swiper className="swiper-wrapper">
+                        <SwiperSlide>
                         <div className="swiper-slide">
                             <a className="served-link" href="#">
                                 Healthcare
                             </a>
                         </div>
-                        <div className="swiper-slide">
+                        </SwiperSlide>
+                        {/* <div className="swiper-slide">
                             <a className="served-link" href="#">
                                 UI&UX
                             </a>
@@ -97,8 +135,8 @@ export default function Home({themeoptions,homepagedata}:any) {
                             <a className="served-link" href="#">
                                 FRONT-END DEVELOPMENT
                             </a>
-                        </div>
-                    </div>
+                        </div> */}
+                    </Swiper>
                 </div>
 
                 <div className="swiper-container industry-slide-bottom mt-4">
