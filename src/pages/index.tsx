@@ -10,9 +10,7 @@ import { Autoplay } from 'swiper/modules';
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({themeoptions,homepagedata}:any) {
-    // const swiper = new Swiper(...);
 
- 
       const settingsTopSlider = {
         // Install modules
         modules: [Autoplay],
@@ -156,8 +154,8 @@ export default function Home({themeoptions,homepagedata}:any) {
 
                 <div className="swiper-container industry-slide-bottom mt-4">
 
-                <Swiper className="swiper-wrapper" {...settingsBottomSlider}>
-                <SwiperSlide>
+                    <Swiper className="swiper-wrapper" {...settingsBottomSlider}>
+                        <SwiperSlide>
                             <a className="served-link" href="#">
                                 Healthcare
                             </a>
@@ -178,31 +176,7 @@ export default function Home({themeoptions,homepagedata}:any) {
                             </a>
                         </SwiperSlide>
                     </Swiper>
-
-                    {/* <div className="swiper-wrapper">
-                        <div className="swiper-slide">
-                            <a className="served-link" href="#">
-                                Healthcare
-                            </a>
-                        </div>
-                        <div className="swiper-slide">
-                            <a className="served-link" href="#">
-                                UI&UX
-                            </a>
-                        </div>
-                        <div className="swiper-slide">
-                            <a className="served-link" href="#">
-                                BRANDING
-                            </a>
-                        </div>
-                        <div className="swiper-slide">
-                            <a className="served-link" href="#">
-                                FRONT-END DEVELOPMENT
-                            </a>
-                        </div>
-                    </div> */}
                 </div>
-
             </div>
           </div>
         </div>
