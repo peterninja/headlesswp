@@ -68,6 +68,13 @@ export default class GraphAPI {
           wDescription
           wHeading
           wSubHeading
+          counter {
+            counterName
+            counterNumber
+          }
+          wImage {
+            mediaItemUrl
+          }
         }
       }
     }
