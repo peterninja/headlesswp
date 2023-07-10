@@ -4,6 +4,7 @@ import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import GraphAPI from '@/service/graphQL'
 import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 
 // import { Inter } from 'next/font/google'
@@ -14,7 +15,7 @@ export default function Home({themeoptions,homepagedata}:any) {
       const settingsTopSlider = {
         // Install modules
         modules: [Autoplay],
-        // slidesPerView:'auto',
+        slidesPerView:'auto' as 'auto',
         // allowTouchMove: false,
         spaceBetween: 20,
         centeredSlides: true,
@@ -36,9 +37,8 @@ export default function Home({themeoptions,homepagedata}:any) {
 
 
       const settingsBottomSlider = {
-        // Install modules
         modules: [Autoplay],
-        // slidesPerView:'auto',
+        slidesPerView : 'auto' as 'auto',
         // allowTouchMove: false,
         spaceBetween: 20,
         centeredSlides: true,
