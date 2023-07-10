@@ -9,6 +9,7 @@ import GraphAPI from '@/service/graphQL'
 
 export default function Home({themeoptions,homepagedata}:any) {
     const homedata = homepagedata.pageBy.homepage;
+    const counterData = homedata.counter;
     console.log(homedata);
   return (
     <>
@@ -57,7 +58,7 @@ export default function Home({themeoptions,homepagedata}:any) {
                         <div className="cover"></div>
                         <div className="counters p-xl-4 p-md-3 p-2" id="counter">
                             
-                        {homedata.counter.map((counterItem: any) => {
+                        {counterData.map((counterItem: any) => {
                             return (
                                 <div className="counter-info">
                                     <div className="number"><span className="counter-value" data-count={counterItem.counterNumber}>0</span>+</div>
