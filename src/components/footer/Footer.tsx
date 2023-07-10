@@ -1,5 +1,7 @@
 const baseURL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import router from 'next/router';
 
 function Footer({themeoptions}:any) {
 
@@ -39,7 +41,7 @@ function Footer({themeoptions}:any) {
             setFooterServices(json);
         })
      },[]);
-    //  console.log(menus_footer);
+     console.log(menus);
     const data = themeoptions.themeOptionSettings.themeOptions;
     return(
         <>
@@ -122,10 +124,11 @@ function Footer({themeoptions}:any) {
                             <div className="h4">Company</div>
                             <div className="footer-link">
                                 <ul>
-                                {menus.map((menu: any, index) => {
+                                    {menus.map((menu: any, index) => {
                                         return (
                                        <li className="nav-item" key={menu.ID}>
-                                        <a href={menu.url}>{menu.title}</a>
+                                        <Link href={menu.post_name}>{menu.title}
+                                        </Link>
                                        </li>
                                        );
                                     })}
