@@ -53,25 +53,19 @@ export default function Home({themeoptions,homepagedata}:any) {
 
                 <div className="col-xl-3 col-lg-4">
                     <div className="who-we-img wrapper-gsap" data-aos="fade" data-aos-delay="50">
-                        <img src="/assets/images/img1.webp" alt=""/>
+                        <img src={homedata.wImage.mediaItemUrl} alt=""/>
                         <div className="cover"></div>
                         <div className="counters p-xl-4 p-md-3 p-2" id="counter">
-                            <div className="counter-info">
-                                <div className="number"><span className="counter-value" data-count="15">0</span>+</div>
-                                <div className="counter-name">Industries Served</div>
-                            </div>
-                            <div className="counter-info">
-                                <div className="number"><span className="counter-value" data-count="12">0</span>+</div>
-                                <div className="counter-name">Yrs of Experience</div>
-                            </div>
-                            <div className="counter-info">
-                                <div className="number"><span className="counter-value" data-count="200">0</span>+</div>
-                                <div className="counter-name">Global Team</div>
-                            </div>
-                            <div className="counter-info">
-                                <div className="number"><span className="counter-value" data-count="550">0</span>+</div>
-                                <div className="counter-name">Storefronts Launched</div>
-                            </div>
+                            
+                        {homedata.counter.map((counterItem: any, index) => {
+                            return (
+                                <div className="counter-info" key={index}>
+                                    <div className="number"><span className="counter-value" data-count={counterItem.counterNumber}>0</span>+</div>
+                                    <div className="counter-name">{counterItem.counterName}</div>
+                                </div>
+                                );
+                            })}
+                           
                         </div>
                     </div>
                 </div>
