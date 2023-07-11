@@ -131,4 +131,27 @@ export default class GraphAPI {
       data: graphqlQuery,
     });
   }
+
+  static blogPage() {
+    const blogPageQuery = `
+    query blogPageQuery {
+      pageBy(pageId: 161) {
+        blog {
+          blogHeading
+          blogTextline1
+          blogTextline2
+        }
+      }
+    }`;
+    const graphqlQuery = {
+      operationName: "blogPageQuery",
+      query: blogPageQuery,
+    };
+    return axios({
+      url: baseURL,
+      method: "post",
+      headers: headers,
+      data: graphqlQuery,
+    });
+  }
 }

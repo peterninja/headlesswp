@@ -2,29 +2,34 @@ import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import GraphAPI from '@/service/graphQL'
 
-export default function blog({themeoptions,blogListing}:any) {
-    
+export default function blog({themeoptions,blogPage,blogListing}:any) {
+    console.log(blogPage.pageBy.blog);
+    const blogBannerData = blogPage.pageBy.blog;
     const blogData = blogListing.posts.nodes;
     // console.log(blogListing.posts);
     return(
         <>
         <Header themeoptions={themeoptions}/>
-
         <section className="hero-banner sub-banner pb-5">
         <div className="container">
             <div className="row justify-content-md-between justify-content-center align-items-center">
                 <div className="col-md-10" data-aos="fade" data-aos-delay="50">
-                    <div className="page-heading">Blog</div>
+                    {blogBannerData.blogHeading &&(
+                        <div className="page-heading">{blogBannerData.blogHeading}</div>
+                    )}
                     <h1>
-                        <span className="overflow-hidden d-inline-block">
-                            <span className="anim-gsap-1 d-inline-block">Bringing you the latest news</span>
-                        </span>
-                        <span className="overflow-hidden d-inline-block">
-                            <span className="anim-gsap-2 d-inline-block">from the Lavorg platform</span>
-                        </span> 
+                        {blogBannerData.blogTextline1 &&(
+                          <span className="overflow-hidden d-inline-block">
+                            <span className="anim-gsap-1 d-inline-block">{blogBannerData.blogTextline1}</span>
+                          </span>  
+                        )}
+                        {blogBannerData.blogTextline2 &&(
+                            <span className="overflow-hidden d-inline-block">
+                                <span className="anim-gsap-2 d-inline-block">{blogBannerData.blogTextline2}</span>
+                            </span> 
+                        )}
                     </h1>
                 </div>
-
                 <div className="col-md-4">
                     <div className="hero-img">
                         <img src="assets/images/hero-shape.svg" alt="img"/>
@@ -33,7 +38,6 @@ export default function blog({themeoptions,blogListing}:any) {
             </div>
         </div>
         </section>
-
         <section className="section-space light-bg">
             <div className="container mix-box-filter">
                 <div className="row justify-content-between mb-lg-5 mb-4 mix-filter">
@@ -59,7 +63,6 @@ export default function blog({themeoptions,blogListing}:any) {
                         <hr className="m-0"/>
                     </div>
                 </div>
-                
                 <div className="row">
                 {blogData.map((blogsingle:any,index:any) => {
                     console.log(blogsingle);
@@ -105,8 +108,6 @@ export default function blog({themeoptions,blogListing}:any) {
                                 )
                             )
                         })}
-                    
-
                     {/* <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix business-tips">
                         <div className="blog-block sm-blog">
                             <div className="img-tag">
@@ -122,7 +123,6 @@ export default function blog({themeoptions,blogListing}:any) {
                             </div>
                         </div>
                     </div>
-
                     <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix technology">
                         <div className="blog-block sm-blog">
                             <div className="img-tag">
@@ -138,7 +138,6 @@ export default function blog({themeoptions,blogListing}:any) {
                             </div>
                         </div>
                     </div>
-
                     <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips">
                         <div className="blog-block sm-blog">
                             <div className="img-tag">
@@ -154,7 +153,6 @@ export default function blog({themeoptions,blogListing}:any) {
                             </div>
                         </div>
                     </div>
-
                     <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix business-tips">
                         <div className="blog-block sm-blog">
                             <div className="img-tag">
@@ -170,7 +168,6 @@ export default function blog({themeoptions,blogListing}:any) {
                             </div>
                         </div>
                     </div>
-
                     <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix technology">
                         <div className="blog-block sm-blog">
                             <div className="img-tag">
@@ -298,10 +295,8 @@ export default function blog({themeoptions,blogListing}:any) {
                             </div>
                         </div>
                     </div> */}
-
                 </div>
-
-                <div className="row mt-5">
+                {/* <div className="row mt-5">
                     <div className="col-12">
                         <nav aria-label="Page navigation example">
                             <ul className="pagination justify-content-center mb-0">
@@ -323,7 +318,7 @@ export default function blog({themeoptions,blogListing}:any) {
                             </ul>
                         </nav>
                     </div>
-            </div>
+                </div> */}
             </div>
         </section>
         
@@ -333,13 +328,12 @@ export default function blog({themeoptions,blogListing}:any) {
 }
 export async function getStaticProps() {
     const themeOptions = await GraphAPI.themeOptions();
-    // const homepagedata = await GraphAPI.homePage();
+    const blogPage = await GraphAPI.blogPage();
     const blogListing = await GraphAPI.blogListing();
-    // console.log(blogListing);
     return {
         props: {
             themeoptions: themeOptions.data.data,
-            // homepagedata: homepagedata.data.data,
+            blogPage: blogPage.data.data,
             blogListing: blogListing.data.data
         }
     }
