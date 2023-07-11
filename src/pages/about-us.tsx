@@ -44,7 +44,7 @@ function about({themeoptions}:any) {
             </div>
         </div>
         </section>
-
+        
         <section className="standout white-content section-space">
         <div className="container">
             <div className="row">
@@ -407,7 +407,7 @@ function about({themeoptions}:any) {
                 </div>
             </div>
         </section>
-        
+
         <Footer themeoptions={themeoptions}/>
         </>
     )
