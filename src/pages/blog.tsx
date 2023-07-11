@@ -324,7 +324,7 @@ export async function getStaticProps() {
         props: {
             themeoptions: themeOptions.data.data,
             // homepagedata: homepagedata.data.data,
-            // blogListing: blogListing.data.data
+            blogListing: blogListing.data.data
         }
     }
 }
