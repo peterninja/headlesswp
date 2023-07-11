@@ -89,4 +89,30 @@ export default class GraphAPI {
       data: graphqlQuery,
     });
   }
+
+
+  static blogListing() {
+    const blogListing = `
+    query GetPosts {
+      posts {
+        nodes {
+          id
+          title
+          date
+          content
+        }
+      }
+    }
+        `;
+    const graphqlQuery = {
+      operationName: "blogListing",
+      query: blogListing,
+    };
+    return axios({
+      url: baseURL,
+      method: "post",
+      headers: headers,
+      data: graphqlQuery,
+    });
+  }
 }
