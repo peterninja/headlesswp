@@ -3,7 +3,9 @@ import Footer from '@/components/footer/Footer'
 import GraphAPI from '@/service/graphQL'
 
 export default function blog({themeoptions,blogListing}:any) {
-    console.log(blogListing);
+    
+    const blogData = blogListing.posts.nodes;
+    // console.log(blogListing.posts);
     return(
         <>
         <Header themeoptions={themeoptions}/>
@@ -35,15 +37,15 @@ export default function blog({themeoptions,blogListing}:any) {
         <section className="section-space light-bg">
             <div className="container mix-box-filter">
                 <div className="row justify-content-between mb-lg-5 mb-4 mix-filter">
-                    <div className="col-lg-8">
+                    {/* <div className="col-lg-8">
                         <ul>
                             <li><a href="javascript:void(0)" className="filter" data-filter="all">All</a></li>
                             <li><a href="javascript:void(0)" className="filter" data-filter=".marketing">Marketing</a></li>
                             <li><a href="javascript:void(0)" className="filter" data-filter=".business-tips">Business Tips</a></li>
                             <li><a href="javascript:void(0)" className="filter" data-filter=".technology">Technology</a></li>
                         </ul>
-                    </div>
-                    <div className="col-xxl-2 col-lg-3 mt-3 mt-lg-0 order-lg-0 order-2">
+                    </div> */}
+                    {/* <div className="col-xxl-2 col-lg-3 mt-3 mt-lg-0 order-lg-0 order-2">
                         <select className="form-control sorting-control">
                             <option value="">Sort by</option>
                             <option value="">Sort by 1</option>
@@ -52,46 +54,60 @@ export default function blog({themeoptions,blogListing}:any) {
                             <option value="">Sort by 4</option>
                             <option value="">Sort by 5</option>
                         </select>
-                    </div>
+                    </div> */}
                     <div className="col-12 order-lg-0 order-1 d-sm-block d-none">
                         <hr className="m-0"/>
                     </div>
                 </div>
                 
                 <div className="row">
-                    <div className="col-lg-8 col-md-6 mb-3 mb-md-4 mix technology">
-                        <div className="blog-block mw-100 sm-blog">
-                            <div className="img-tag">
-                                <img src="assets/images/blog1.webp" alt=""/>
-                            </div>
-                            <div className="info">
-                                <div className="post">Web Development</div>
-                                <a title="How to add Google authentication to your Next.js + Live app with NextAuth.js" href="#"><h3>How to add Google authentication to your Next.js + Live app with NextAuth.js</h3></a>
-                                <p>Learn how to use NextAuth.js to integrate Google authentication with your Next.js + Liveblocks application—enabling personalization with users' names, photos, and more throughout your product.implementing Single Sign-On improves security by allowing users to bypass entering their password repeatedly.</p>
-                                <div className="pt-2 mt-auto">
-                                    <a className="viewLink" href="#">Ream more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                {blogData.map((blogsingle:any,index:any) => {
+                    console.log(blogsingle);
+                        const categories = blogsingle.categories.nodes;
+                        return (
+                                blogData.index == 1 ? (
+                                    <div className="col-lg-8 col-md-6 mb-3 mb-md-4 mix technology">
+                                    <div className="blog-block mw-100 sm-blog">
+                                        <div className="img-tag">
+                                            <img src="assets/images/blog1.webp" alt=""/>
+                                        </div>
+                                        <div className="info">
+                                            <div className="post">Web Development</div>
+                                            <a title="How to add Google authentication to your Next.js + Live app with NextAuth.js" href="#"><h3>How to add Google authentication to your Next.js + Live app with NextAuth.js</h3></a>
+                                            <p>Learn how to use NextAuth.js to integrate Google authentication with your Next.js + Liveblocks application—enabling personalization with users' names, photos, and more throughout your product.implementing Single Sign-On improves security by allowing users to bypass entering their password repeatedly.</p>
+                                            <div className="pt-2 mt-auto">
+                                                <a className="viewLink" href="#">Ream more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                ) : (
+                                    <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips">
+                                        <div className="blog-block sm-blog">
+                                            <div className="img-tag">
+                                                <img src={blogsingle.featuredImage.node.mediaItemUrl} alt=""/>
+                                            </div>
+                                            <div className="info">
+                                                {categories.map((categorySingle:any, index:any) => {
+                                                    return(
+                                                        <div className="post" key={index}>{categorySingle.name}
+                                                        </div>
+                                                    );
+                                                })}
+                                                <a title={blogsingle.title} href={blogsingle.link}><h3>{blogsingle.title}</h3></a>
+                                                <p dangerouslySetInnerHTML={{__html:blogsingle.content}} />
+                                                <div className="pt-2 mt-auto">
+                                                    <a className="viewLink" href={blogsingle.link}>Read more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            )
+                        })}
                     
-                    <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips">
-                        <div className="blog-block sm-blog">
-                            <div className="img-tag">
-                                <img src="assets/images/blog3.webp" alt=""/>
-                            </div>
-                            <div className="info">
-                                <div className="post">Marketing</div>
-                                <a title="FD Forex Platform" href="#"><h3>FD Forex Platform</h3></a>
-                                <p>Lavorg war superschnell und hatte sogar eine zusätzliche Lösung parat, obwohl die Aufgabe eigentlich schon erledigt war.</p>
-                                <div className="pt-2 mt-auto">
-                                    <a className="viewLink" href="#">Ream more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix business-tips">
+                    {/* <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix business-tips">
                         <div className="blog-block sm-blog">
                             <div className="img-tag">
                                 <img src="assets/images/blog4.webp" alt=""/>
@@ -281,7 +297,7 @@ export default function blog({themeoptions,blogListing}:any) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
 
@@ -319,7 +335,7 @@ export async function getStaticProps() {
     const themeOptions = await GraphAPI.themeOptions();
     // const homepagedata = await GraphAPI.homePage();
     const blogListing = await GraphAPI.blogListing();
-    console.log(blogListing);
+    // console.log(blogListing);
     return {
         props: {
             themeoptions: themeOptions.data.data,

@@ -91,7 +91,6 @@ export default class GraphAPI {
     });
   }
 
-
   static blogListing() {
     const blogListing = `
     query GetPosts {
@@ -101,6 +100,12 @@ export default class GraphAPI {
           title
           date
           content
+          link
+          categories{
+            nodes{
+              name
+            }
+          }
           featuredImage {
             node {
               mediaItemUrl
@@ -108,12 +113,17 @@ export default class GraphAPI {
           }
         }
       }
-    }
-        `;
+    }`;
     const graphqlQuery = {
-      operationName: "blogListing",
+      operationName: "GetPosts",
       query: blogListing,
     };
+    console.log(axios({
+      url: baseURL,
+      method: "post",
+      headers: headers,
+      data: graphqlQuery,
+    }));
     return axios({
       url: baseURL,
       method: "post",
