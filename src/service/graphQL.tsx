@@ -4,6 +4,7 @@ const headers = {
   "content-type": "application/json",
 };
 export default class GraphAPI {
+
   static themeOptions() {
     const themeQuery = `
     query ThemeQuery {
@@ -100,6 +101,11 @@ export default class GraphAPI {
           title
           date
           content
+          featuredImage {
+            node {
+              mediaItemUrl
+            }
+          }
         }
       }
     }

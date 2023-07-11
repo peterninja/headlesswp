@@ -2,7 +2,8 @@ import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import GraphAPI from '@/service/graphQL'
 
-function blog({themeoptions}:any) {
+export default function blog({themeoptions,blogListing}:any) {
+    console.log(blogListing);
     return(
         <>
         <Header themeoptions={themeoptions}/>
@@ -73,6 +74,7 @@ function blog({themeoptions}:any) {
                             </div>
                         </div>
                     </div>
+                    
                     <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips">
                         <div className="blog-block sm-blog">
                             <div className="img-tag">
@@ -315,12 +317,14 @@ function blog({themeoptions}:any) {
 }
 export async function getStaticProps() {
     const themeOptions = await GraphAPI.themeOptions();
-    const homepagedata = await GraphAPI.homePage();
+    // const homepagedata = await GraphAPI.homePage();
+    const blogListing = await GraphAPI.blogListing();
+    console.log(blogListing);
     return {
         props: {
             themeoptions: themeOptions.data.data,
-            homepagedata: homepagedata.data.data
+            // homepagedata: homepagedata.data.data,
+            // blogListing: blogListing.data.data
         }
     }
 }
-export default blog;
