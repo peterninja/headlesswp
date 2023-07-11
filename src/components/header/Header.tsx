@@ -58,9 +58,12 @@ export default function Header({themeoptions}:any) {
         <header>
         <div className="container">
             <nav className="navbar navbar-light">
-                <a title="Lavorg" data-aos="fade" className="navbar-brand" href="index.html">
+                {data.mainLogo.mediaItemUrl &&(
+                    <a title="Lavorg" data-aos="fade" className="navbar-brand" href="index.html">
                     <img src={data.mainLogo.mediaItemUrl} alt="" />
-                </a>
+                    </a>
+                )}
+                
                 <div className="ms-auto top-link">
                     <a title="Become a Partner" className="link me-3 viewLink" href={data.simpleMenuText.url}>{data.simpleMenuText.title}</a>
                     <a title="Contact Us" className="btn primary-btn" href={data.buttonMenu.url}><span className="d-none d-md-block">{data.buttonMenu.title}</span><i className="fa-solid fa-phone d-block d-md-none"></i></a>
@@ -75,19 +78,37 @@ export default function Header({themeoptions}:any) {
                     <span className="close">Close</span>
                 </button>
                 <div className="collapse navbar-collapse d-flex" id="navbarSupportedContent">
-                    <ul className="navbar-nav">
-                        {Headermenu.map((HeadermenuItem: any, index) => {
-                            return (
-                                <li className="nav-item" key={HeadermenuItem.ID}>
-                                <a className="nav-link" href={HeadermenuItem.url}>{HeadermenuItem.title}</a>
-                                </li>
-                            );
-                        })}
-                    </ul>
+                    {Headermenu &&(
+                        <ul className="navbar-nav">
+                            {Headermenu.map((HeadermenuItem: any, index) => {
+                                return (
+                                    <li className="nav-item" key={HeadermenuItem.ID}>
+                                    <a className="nav-link" href={HeadermenuItem.url}>{HeadermenuItem.title}</a>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    )}
                     <div className="info-bar">
-                        <div className="overflow-hidden"><div className="info-title info-list">{data.headerTextLine1}</div></div>
-                        <div className="overflow-hidden"><a className="viewLink info-list" href="mailto:hello@lavorg.agency">{data.headerEmail}</a></div>
-                        <div className="overflow-hidden"><a className="viewLink info-list" href="tel:+491731732121"><strong>{data.headerPhone}</strong></a></div>
+                        {data.headerTextLine1 &&(
+                            <div className="overflow-hidden">
+                                <div className="info-title info-list">{data.headerTextLine1}</div>
+                            </div>
+                        )}
+                        {data.headerEmail &&(
+                            <div className="overflow-hidden">
+                                <a className="viewLink info-list" href={`mailto:` + data.headerEmail}>{data.headerEmail}
+                                </a>
+                            </div>
+                        )}
+                        {data.headerPhone &&(
+                            <div className="overflow-hidden">
+                                <a className="viewLink info-list" href={`tel:` + data.headerPhone}>
+                                    <strong>{data.headerPhone}</strong>
+                                </a>
+                            </div>
+                        )}
+                        
                     </div>
                     <div className="menu-content">
                         <div className="menu-tab" id="services-sub">

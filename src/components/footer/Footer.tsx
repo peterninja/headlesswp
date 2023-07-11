@@ -9,23 +9,20 @@ function Footer({themeoptions}:any) {
    const [menus_footer,setFooterMenu] = useState([]);
    const [menus_footer_technology,setFooterTechnology] = useState([]);
    const [menus_services,setFooterServices] = useState([]);
-   useEffect(() => {
-      fetch('https://dev-headlesswp.pantheonsite.io/wp-json/menu/footer_company')
-      .then((response) => response.json())
-      .then((json) =>{
-         setMenu(json);
-      })
-   },[]);
-    // console.log(menus);
-
     useEffect(() => {
+        fetch('https://dev-headlesswp.pantheonsite.io/wp-json/menu/footer_company')
+        .then((response) => response.json())
+        .then((json) =>{
+            setMenu(json);
+        })
+    },[]);
+     useEffect(() => {
         fetch('https://dev-headlesswp.pantheonsite.io/wp-json/menu/footer_hire_developer_team')
         .then((response) => response.json())
         .then((json) =>{
             setFooterMenu(json);
         })
      },[]);
-
      useEffect(() => {
         fetch('https://dev-headlesswp.pantheonsite.io/wp-json/menu/footer_technology_expertise')
         .then((response) => response.json())
@@ -33,7 +30,6 @@ function Footer({themeoptions}:any) {
             setFooterTechnology(json);
         })
      },[]);
-
      useEffect(() => {
         fetch('https://dev-headlesswp.pantheonsite.io/wp-json/menu/footer_services')
         .then((response) => response.json())
@@ -41,9 +37,8 @@ function Footer({themeoptions}:any) {
             setFooterServices(json);
         })
      },[]);
-     console.log(menus);
-    const data = themeoptions.themeOptionSettings.themeOptions;
-    return(
+     const data = themeoptions.themeOptionSettings.themeOptions;
+     return(
         <>
         <footer>
         <div className="container">
@@ -51,18 +46,25 @@ function Footer({themeoptions}:any) {
                 <div className="col-lg-7 col-md-6 mb-3 mb-md-0">
                     <div className="info">
                         <h2>
-                            <span className="overflow-hidden d-inline-block">
-                                <span className="footer-title-ani d-block"><strong>{data.footerTextLine1}</strong></span>
-                            </span>
-                            <span className="overflow-hidden d-block">
-                                <span className="footer-title-ani d-block">{data.footerTextLine2}</span>
-                            </span>
+                            {data.footerTextLine1 &&(
+                                <span className="overflow-hidden d-inline-block">
+                                    <span className="footer-title-ani d-block"><strong>{data.footerTextLine1}</strong></span>
+                                </span>
+                            )}
+                            {data.footerTextLine2 &&(
+                                <span className="overflow-hidden d-block">
+                                    <span className="footer-title-ani d-block">{data.footerTextLine2}</span>
+                                </span>
+                            )}
                         </h2>
                     </div>
                 </div>
-                <div className="col-lg-5 col-md-6 text-md-end" data-aos="fade">
-                    <a className="email-cont" href="mailto:help@lavorg.com">{data.email}</a>                    
-                </div>
+                {data.email &&(
+                    <div className="col-lg-5 col-md-6 text-md-end" data-aos="fade">
+                        <a className="email-cont" href={`mailto:` + data.email}>{data.email}
+                        </a>                    
+                    </div>
+                )}
             </div>
             <div className="row">
                 <div className="col-12">
@@ -76,13 +78,14 @@ function Footer({themeoptions}:any) {
                             <div className="h4">Services</div>
                             <div className="footer-link">
                                 <ul>
-                                    {menus_services.map((menus_service: any, index) => {
-                                        return (
+                                {menus_services.map((menus_service: any, index) =>    {
+                                    return (
                                         <li className="nav-item" key={menus_service.ID}>
-                                            <a href={menus_service.url}>{menus_service.title}</a>
+                                            <Link href={menus_service.post_name}>{menus_service.title}
+                                            </Link>
                                         </li>
-                                        );
-                                    })}
+                                    );
+                                })}
                                 </ul>
                                 {/* <span className="view-more mt-2">View more</span> */}
                             </div>
@@ -90,51 +93,58 @@ function Footer({themeoptions}:any) {
                         </div>
                         <div className="col-lg-3 col-sm-6 mb-lg-0 mb-4">
                             <div className="h4">Hire Developer Team</div>
-                            <div className="footer-link">
-                                <ul>
-                                    {menus_footer.map((menu_footer: any, index) => {
+                            {menus_footer && (
+                                <div className="footer-link">
+                                    <ul>
+                                    {menus_footer.map((menu_footer: any, index) =>    {
                                         return (
                                             <li className="nav-item" key={menu_footer.ID}>
-                                                <a href={menu_footer.url}>{menu_footer.title}</a>
+                                                <Link href={menu_footer.post_name}>{menu_footer.title}
+                                                </Link>
                                             </li>
                                         );
-                                    })}
-                                </ul>
-                                {/* <span className="view-more mt-2">View more</span> */}
-                            </div>
+                                        })}
+                                    </ul>
+                                    {/* <span className="view-more mt-2">View more</span> */}
+                                </div>
+                            )}
                             <hr className="mb-0 mt-4 d-block d-lg-none"/>
                         </div>
                         <div className="col-lg-3 col-sm-6 mb-lg-0 mb-4">
                             <div className="h4">Technology Expertise</div>
-                            <div className="footer-link">
-                                <ul>
-                                    {menus_footer_technology.map((menus_footer_technology_single: any, index) => {
-                                        return (
+                            {menus_footer_technology && (
+                                <div className="footer-link">
+                                    <ul>
+                                    {menus_footer_technology.map((menus_footer_technology_single: any, index) =>    {
+                                            return (
                                             <li className="nav-item" key={menus_footer_technology_single.ID}>
-                                                <a href={menus_footer_technology_single.url}>{menus_footer_technology_single.title}</a>
+                                                <Link href={menus_footer_technology_single.post_name}>{menus_footer_technology_single.title}
+                                                </Link>
                                             </li>
-                                        );
-                                    })}
-                                </ul>
-                                {/* <span className="view-more mt-2">View more</span> */}
-                            </div>
+                                            );
+                                            })}
+                                    </ul>
+                                    {/* <span className="view-more mt-2">View more</span> */}
+                                </div>
+                            )}
                             <hr className="mb-0 mt-4 d-block d-lg-none"/>
                         </div>
                         <div className="col-lg-3 col-sm-6 mb-lg-0 mb-4">
                             <div className="h4">Company</div>
-                            <div className="footer-link">
-                                <ul>
-                                    {menus.map((menu: any, index) => {
-                                        return (
-                                       <li className="nav-item" key={menu.ID}>
-                                        <Link href={menu.post_name}>{menu.title}
-                                        </Link>
-                                       </li>
-                                       );
-                                    })}
-                                </ul>
-                                {/* <span className="view-more mt-2">View more</span> */}
-                            </div>
+                            {menus &&(
+                                <div className="footer-link">
+                                    <ul>
+                                        {menus.map((menu: any, index) => {
+                                            return (
+                                        <li className="nav-item" key={menu.ID}>
+                                            <Link href={menu.post_name}>{menu.title}
+                                            </Link>
+                                        </li>
+                                        );
+                                        })}
+                                    </ul>
+                                </div>
+                            )}
                             <hr className="mb-0 mt-4 d-block d-lg-none"/>
                         </div>
                     </div>
@@ -144,18 +154,24 @@ function Footer({themeoptions}:any) {
                         <div className="h5">{data.addressBoxHeader}</div>
                         <div className="mt-3 info">
                             <ul>
-                                <li>
-                                    <span className="icon"><img src="assets/images/map-white.svg" alt=""/></span>
-                                    <span>{data.address}</span>
-                                </li>
-                                <li>
-                                    <span className="icon"><img src="assets/images/sent.svg" alt=""/></span>
-                                    <span><a href="mailto:help@lavorg.com">{data.email}</a></span>
-                                </li>
-                                <li>
-                                    <span className="icon"><img src="assets/images/phone-white.svg" alt=""/></span>
-                                    <span><a href="tel:+447894401455">{data.phoneNo}</a></span>
-                                </li>
+                                {data.address &&(
+                                    <li>
+                                        <span className="icon"><img src="assets/images/map-white.svg" alt=""/></span>
+                                        <span>{data.address}</span>
+                                    </li>
+                                )}
+                                {data.email &&(
+                                    <li>
+                                        <span className="icon"><img src="assets/images/sent.svg" alt=""/></span>
+                                        <span><a href={`mailto:` + data.email}>{data.email}</a></span>
+                                    </li>
+                                )}
+                                {data.phoneNo &&(
+                                    <li>
+                                        <span className="icon"><img src="assets/images/phone-white.svg" alt=""/></span>
+                                        <span><a href={`tel:` + data.phoneNo}>{data.phoneNo}</a></span>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                         <div className="social-here mt-4">
@@ -170,15 +186,16 @@ function Footer({themeoptions}:any) {
                     </div>
                 </div>
             </div>
-            <div className="row pb-4 pb-md-5">
-                <div className="col-12">
-                    <div className="copyright"><p>{data.copyrightText}</p></div>
+            {data.copyrightText && (
+                <div className="row pb-4 pb-md-5">
+                    <div className="col-12">
+                        <div className="copyright"><p>{data.copyrightText}</p></div>
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     </footer>
         </>
     )
 }
 export default Footer;
-

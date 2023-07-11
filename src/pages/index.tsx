@@ -115,7 +115,6 @@ export default function Home({themeoptions,homepagedata}:any) {
                             {counterData &&(
                             <div className="counters p-xl-4 p-md-3 p-2" id="counter">
                                 {counterData.map((counterItem: any,index: any) => {
-                                // console.log(index);
                                 return (
                                     <div className="counter-info" key={index}>
                                         <div className="number"><span className="counter-value" data-count={counterItem.counterNumber}>{counterItem.counterNumber}</span>+</div>
@@ -135,32 +134,36 @@ export default function Home({themeoptions,homepagedata}:any) {
             <div className="row text-center">
                 <div className="col-12 served-industries-outer">
                     <h2>{homedata.iHeading}</h2>
-                    <div className="swiper-container industry-slide-top mt-xl-5 mt-4">
-                        <Swiper className="swiper-wrapper" {...settingsTopSlider}>
-                            {topIndustrySlider.map((topsliderItem: any,index: any) => {
-                                return(
-                                <SwiperSlide key={index}>
-                                    <a className="served-link" href="#">
-                                        {topsliderItem.industryName}
-                                    </a>
-                                </SwiperSlide>
-                                );
-                            })}
-                        </Swiper>
-                    </div>
-                    <div className="swiper-container industry-slide-bottom mt-4">
-                        <Swiper className="swiper-wrapper" {...settingsBottomSlider}>
-                            {bottomIndustrySlider.map((bottomsliderItem: any,index: any) => {
-                                return(
-                                <SwiperSlide key={index}>
-                                    <a className="served-link" href="#">
-                                        {bottomsliderItem.industryName}
-                                    </a>
-                                </SwiperSlide>
-                                );
-                            })}
-                        </Swiper>
-                    </div>
+                    {topIndustrySlider &&(
+                        <div className="swiper-container industry-slide-top mt-xl-5 mt-4">
+                            <Swiper className="swiper-wrapper" {...settingsTopSlider}>
+                                {topIndustrySlider.map((topsliderItem: any,index: any) => {
+                                    return(
+                                    <SwiperSlide key={index}>
+                                        <a className="served-link" href="#">
+                                            {topsliderItem.industryName}
+                                        </a>
+                                    </SwiperSlide>
+                                    );
+                                })}
+                            </Swiper>
+                        </div>
+                    )}
+                    {bottomIndustrySlider &&(
+                        <div className="swiper-container industry-slide-bottom mt-4">
+                            <Swiper className="swiper-wrapper" {...settingsBottomSlider}>
+                                {bottomIndustrySlider.map((bottomsliderItem: any,index: any) => {
+                                    return(
+                                    <SwiperSlide key={index}>
+                                        <a className="served-link" href="#">
+                                            {bottomsliderItem.industryName}
+                                        </a>
+                                    </SwiperSlide>
+                                    );
+                                })}
+                            </Swiper>
+                        </div>
+                    )}
                 </div>
             </div>
             </div>
