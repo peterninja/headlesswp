@@ -139,7 +139,7 @@ export default function Home({themeoptions,homepagedata}:any) {
                         <Swiper className="swiper-wrapper" {...settingsTopSlider}>
                             {topIndustrySlider.map((topsliderItem: any,index: any) => {
                                 return(
-                                <SwiperSlide>
+                                <SwiperSlide key={index}>
                                     <a className="served-link" href="#">
                                         {topsliderItem.industryName}
                                     </a>
@@ -152,7 +152,7 @@ export default function Home({themeoptions,homepagedata}:any) {
                         <Swiper className="swiper-wrapper" {...settingsBottomSlider}>
                             {bottomIndustrySlider.map((bottomsliderItem: any,index: any) => {
                                 return(
-                                <SwiperSlide>
+                                <SwiperSlide key={index}>
                                     <a className="served-link" href="#">
                                         {bottomsliderItem.industryName}
                                     </a>
