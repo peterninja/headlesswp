@@ -44,7 +44,7 @@ function about({themeoptions}:any) {
             </div>
         </div>
         </section>
-        
+
         <section className="standout white-content section-space">
         <div className="container">
             <div className="row">
@@ -86,13 +86,13 @@ function about({themeoptions}:any) {
                             Technical Excellence</h2>
                     </div>
                     <div className="col-md-6">
-                        <p>Everything starts with a need. Our products are designed to meet those needs by understanding customers, creating business value and utilising the best technology. We also bring a cultural sensitivity to our work, by understanding each product’s unique place in the world.</p>
-                        <ul>
-                            <li>4 Hubs, One Team</li>
-                            <li>16+ Hour Timezone Coverage</li>
-                            <li>Remote First, Distributed Teams</li>
-                            <li>16 Office Employees and Still Counting</li>
-                        </ul>
+                            <p>Everything starts with a need. Our products are designed to meet those needs by understanding customers, creating business value and utilising the best technology. We also bring a cultural sensitivity to our work, by understanding each product’s unique place in the world.</p>
+                            <ul>
+                                <li>4 Hubs, One Team</li>
+                                <li>16+ Hour Timezone Coverage</li>
+                                <li>Remote First, Distributed Teams</li>
+                                <li>16 Office Employees and Still Counting</li>
+                            </ul>
                     </div>
                 </div>
             </div>

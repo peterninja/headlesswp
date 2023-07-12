@@ -154,4 +154,30 @@ export default class GraphAPI {
       data: graphqlQuery,
     });
   }
+
+
+  static blogFilter(keyword:any) {
+    const blogFilter = `
+    query blogFilter{
+      posts(
+        where: { categoryName:"${keyword}"}
+      ) {
+        edges{
+          node{
+            title
+          }
+        }
+      }
+    }`;
+    const graphqlQuery = {
+      operationName: "blogFilter",
+      query: blogFilter,
+    };
+    return axios({
+      url: baseURL,
+      method: "post",
+      headers: headers,
+      data: graphqlQuery,
+    });
+  }
 }
