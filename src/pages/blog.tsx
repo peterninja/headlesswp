@@ -12,7 +12,6 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
         const [searchBlogs, setSearchBlogs] = useState(null);
         const [filterBlogs, setFilterBlogs] = useState<any>(null);
         const [searchFlag, setSearchFlag] = useState<any>(false);
-        
         const [blogData, setBlogData] = useState<any>(blogListing.posts.nodes);
         const handleclick = async (event:any) => {
             event.preventDefault();
@@ -39,7 +38,7 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
             } else {
               setSearchFlag(false);
             }
-          };
+        };
 
         const handleSearchSubmit = async (event:any) => {
             
@@ -48,9 +47,10 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
             // console.log(event.target.value);
             if (searchFlag) {
             const blogSearchk = (await GraphAPI.blogSearch(keyword)).data.data;
-                setSearchBlogs(blogSearchk);
+            const blogSearchData = blogSearchk.posts.nodes
+                setBlogData(blogSearchData);
             } else {
-                setSearchBlogs(null);
+                setBlogData(null);
             }
             // if(elms == "All"){
             //     const filterBlog = (await GraphAPI.blogListing()).data.data;
@@ -64,8 +64,8 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
             //     setBlogData(catFilter);
             // }
         };
-        console.log("kk",searchBlogs);
-        console.log("blog data",blogData);
+        // console.log("kk",searchBlogs);
+        console.log("blog datasss",blogData);
         console.log("filter data",filterBlogs);
         return(
             <>
