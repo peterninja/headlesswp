@@ -101,6 +101,7 @@ export default class GraphAPI {
           date
           content
           link
+          slug
           terms{
             nodes{
               name

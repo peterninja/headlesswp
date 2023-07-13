@@ -1,7 +1,9 @@
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import GraphAPI from '@/service/graphQL'
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostCategories,blogSearch}:any) {
 
@@ -136,7 +138,8 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
                                                     <a title={blogsingle.title} href={blogsingle.link}><h3>{blogsingle.title}</h3></a>
                                                     <div dangerouslySetInnerHTML={{__html:blogsingle.content}} />
                                                     <div className="pt-2 mt-auto">
-                                                        <a className="viewLink" href={blogsingle.link}>Read more</a>
+                                                    <Link className="viewLink" href={`/blog/${blogsingle.slug}`} >Read More</Link>
+                                                        {/* <a  href={blogsingle.slug}>Read more</a> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -178,6 +181,17 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
             </>
         )
 }
+
+
+// export async function getStaticPaths() {
+//     // const blogPosts = await GraphAPI.blogPostListing();
+//     // const paths = blogPosts.data.data.posts.edges.map((item) => {
+//     //   const params = { slug: item.node.slug };
+//     //   return { params };
+//     // });
+//     // return { paths, fallback: true };
+//   }
+
 export async function getStaticProps() {
     const themeOptions = await GraphAPI.themeOptions();
     const blogPage = await GraphAPI.blogPage();
