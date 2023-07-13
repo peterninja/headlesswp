@@ -2496,7 +2496,17 @@
         }
     }
 }
-
+.input_search input{
+    width: 19%;
+    background-color: transparent;
+    /* border: 0; */
+    font-size: 18px;
+    color: #fff;
+    border-style: outset;
+    /* padding-right: 20%; */
+    align-items: left !important;
+    position: absolute;
+}
 .blog-info-list{
     width: 20%;
     border-left: 1px solid #B4B4B4;
