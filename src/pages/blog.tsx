@@ -3,23 +3,68 @@ import Footer from '@/components/footer/Footer'
 import GraphAPI from '@/service/graphQL'
 import React, { useEffect, useState } from "react";
 
-export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostCategories}:any) {
+export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostCategories,blogSearch}:any) {
 
         const blogBannerData = blogPage.pageBy.blog;
         // const blogData = blogListing.posts.nodes;
         const allCategories = PostCategories.terms.nodes;
         const [keyword, setKeyword] = useState(null);
+        const [searchBlogs, setSearchBlogs] = useState(null);
         const [filterBlogs, setFilterBlogs] = useState<any>(null);
-        // console.log(blogPage.pageBy.blog);
+        const [searchFlag, setSearchFlag] = useState<any>(false);
+        
         const [blogData, setBlogData] = useState<any>(blogListing.posts.nodes);
         const handleclick = async (event:any) => {
             event.preventDefault();
             const elms = event.target.text;
-            const filterBlog = (await GraphAPI.blogFilter(elms)).data.data;
-            const catFilter = filterBlog.posts.nodes;
-            setFilterBlogs(catFilter);
-            setBlogData(catFilter);
+            console.log(elms);
+            if(elms == "All"){
+                const filterBlog = (await GraphAPI.blogListing()).data.data;
+                const catFilter = filterBlog.posts.nodes;
+                setFilterBlogs(catFilter);
+                setBlogData(catFilter);
+            }else{
+                const filterBlog = (await GraphAPI.blogFilter(elms)).data.data;
+                const catFilter = filterBlog.posts.nodes;
+                setFilterBlogs(catFilter);
+                setBlogData(catFilter);
+            }
         };
+
+        const handleInputChange = (event:any) => {
+            console.log(event.target.value);
+            if (event.target.value !== "") {
+              setKeyword(event.target.value);
+              setSearchFlag(true);
+            } else {
+              setSearchFlag(false);
+            }
+          };
+
+        const handleSearchSubmit = async (event:any) => {
+            
+            event.preventDefault();
+            // const elms = event.target.text;
+            // console.log(event.target.value);
+            if (searchFlag) {
+            const blogSearchk = (await GraphAPI.blogSearch(keyword)).data.data;
+                setSearchBlogs(blogSearchk);
+            } else {
+                setSearchBlogs(null);
+            }
+            // if(elms == "All"){
+            //     const filterBlog = (await GraphAPI.blogListing()).data.data;
+            //     const catFilter = filterBlog.posts.nodes;
+            //     setFilterBlogs(catFilter);
+            //     setBlogData(catFilter);
+            // }else{
+            //     const filterBlog = (await GraphAPI.blogFilter(elms)).data.data;
+            //     const catFilter = filterBlog.posts.nodes;
+            //     setFilterBlogs(catFilter);
+            //     setBlogData(catFilter);
+            // }
+        };
+        console.log("kk",searchBlogs);
         console.log("blog data",blogData);
         console.log("filter data",filterBlogs);
         return(
@@ -57,20 +102,20 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
                 <div className="container mix-box-filter">
                     <div className="row">
                         <div className="col-12 text-center">
-                            <form method="post">
-                            <div className="input_search">
-                                <span>
-                                    <img src="../images/search-interface-symbol.svg" alt="search" />
-                                    </span>
-                                    <input type="text" placeholder="Search..." />
-                                    </div>
-                                    </form>
+                            <form method="post" onSubmit={handleSearchSubmit}>
+                                <div className="input_search">
+                                    {/* <span>
+                                        <img src="../images/search-interface-symbol.svg" alt="search" />
+                                    </span> */}
+                                    <input type="text" placeholder="Search..." onChange={handleInputChange}/>
+                                </div>
+                            </form>
                          </div>
                     </div>
                     <div className="row justify-content-between mb-lg-5 mb-4 mix-filter">
                         <div className="col-lg-8">
                             <ul>
-                                <li><a href="#" className="filter" data-filter="all">All</a></li>
+                                <li><a href="#" className="filter" onClick={handleclick} data-filter="all">All</a></li>
                                 {allCategories.map((term:any,index:any) => {
                                     return(
                                         <li key={index}><a href="#" onClick={handleclick} className="filter" data-filter=".marketing">{term.name}</a></li>
@@ -149,6 +194,7 @@ export async function getStaticProps() {
     const themeOptions = await GraphAPI.themeOptions();
     const blogPage = await GraphAPI.blogPage();
     const blogListing = await GraphAPI.blogListing();
+    const blogSearch = await GraphAPI.blogSearch("s");
     // const blogFilter = await GraphAPI.blogFilter("s");
     const PostCategories = await GraphAPI.PostCategories("s");
     return {
@@ -156,6 +202,7 @@ export async function getStaticProps() {
             themeoptions: themeOptions.data.data,
             blogPage: blogPage.data.data,
             blogListing: blogListing.data.data,
+            blogSearch: blogSearch.data.data,
             // blogFilter: blogFilter.data.data,
             PostCategories: PostCategories.data.data
         }

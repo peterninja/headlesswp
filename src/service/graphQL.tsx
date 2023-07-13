@@ -192,6 +192,42 @@ export default class GraphAPI {
   }
 
 
+  static blogSearch(keyword:any) {
+    const blogSearch = `
+    query blogSearch{
+      posts(
+        where: { search:"${keyword}"}
+      ) {
+        nodes{
+          id
+          title
+          content
+          featuredImage{
+            node{
+              mediaItemUrl
+            }
+          }
+          terms{
+            nodes{
+              name
+            }
+          }
+        }
+      }
+    }`;
+    const graphqlQuery = {
+      operationName: "blogSearch",
+      query: blogSearch,
+    };
+    return axios({
+      url: baseURL,
+      method: "post",
+      headers: headers,
+      data: graphqlQuery,
+    });
+  }
+
+
   static PostCategories(keyword:any) {
     const PostCategories = `
     query PostCategories {
