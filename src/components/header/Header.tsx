@@ -19,7 +19,7 @@ export default function Header({themeoptions}:any) {
         // alert('in');
         setIsToggled(!isToggled);
         const mainNavigation = document.querySelector('.navbar-toggler');
-        const NavBar = document.querySelector('.navbar-light');
+        const NavBar = document.querySelector('.navbar-toggler-icon');
         const Body = document.querySelector('body');
         const navbarCollapse = document.querySelector('.navbar-collapse');
         // const ariaExpand = document.querySelector('aria-expanded');
@@ -38,17 +38,17 @@ export default function Header({themeoptions}:any) {
         const NavBarCollapse = document.querySelector('.navbar-collapse');
         // const ariaExpandToggle = document.querySelector('aria-expanded');
         if (menuToggle && NavBarToggle && BodyToggle && NavBarCollapse) {
-          menuToggle.addEventListener('click', handleToggleClick);
+        //   menuToggle.addEventListener('click', handleToggleClick);
           NavBarToggle.addEventListener('click', handleToggleClick);
-          BodyToggle.addEventListener('click', handleToggleClick);
+        //   BodyToggle.addEventListener('click', handleToggleClick);
           NavBarCollapse.addEventListener('click', handleToggleClick);
         //   ariaExpandToggle.addEventListener('click', handleToggleClick);
         }       
         return () => {
           if (menuToggle && NavBarToggle && BodyToggle && NavBarCollapse) {
-            menuToggle.removeEventListener('click', handleToggleClick);
+            // menuToggle.removeEventListener('click', handleToggleClick);
             NavBarToggle.removeEventListener('click', handleToggleClick);
-            BodyToggle.removeEventListener('click', handleToggleClick);
+            // BodyToggle.removeEventListener('click', handleToggleClick);
             NavBarCollapse.removeEventListener('click', handleToggleClick);
             // ariaExpandToggle.removeEventListener('click', handleToggleClick);
           }
