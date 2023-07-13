@@ -16,9 +16,10 @@ export default function Header({themeoptions}:any) {
      },[]);
     const data = themeoptions.themeOptionSettings.themeOptions;
     const handleToggleClick = () => {
+        // alert('in');
         setIsToggled(!isToggled);
-        const mainNavigation = document.querySelector('header .navbar-toggler');
-        const NavBar = document.querySelector('.navbar');
+        const mainNavigation = document.querySelector('.navbar-toggler');
+        const NavBar = document.querySelector('.navbar-light');
         const Body = document.querySelector('body');
         const navbarCollapse = document.querySelector('.navbar-collapse');
         // const ariaExpand = document.querySelector('aria-expanded');
@@ -32,7 +33,7 @@ export default function Header({themeoptions}:any) {
      };
       useEffect(() => {
         const menuToggle = document.querySelector('header .navbar-toggler');
-        const NavBarToggle = document.querySelector('.navbar');
+        const NavBarToggle = document.querySelector('.navbar-toggler-icon');
         const BodyToggle = document.querySelector('body');
         const NavBarCollapse = document.querySelector('.navbar-collapse');
         // const ariaExpandToggle = document.querySelector('aria-expanded');

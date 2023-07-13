@@ -1,9 +1,9 @@
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import GraphAPI from '@/service/graphQL'
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function blog({themeoptions,blogPage,blogListing,blogFilter}:any) {
+export default function Blog({themeoptions,blogPage,blogListing,blogFilter}:any) {
     console.log(blogFilter);
     const blogBannerData = blogPage.pageBy.blog;
     const blogData = blogListing.posts.nodes;
@@ -19,125 +19,106 @@ export default function blog({themeoptions,blogPage,blogListing,blogFilter}:any)
             const catFilter = filterBlog.posts.edges;
             setFilterBlogs(catFilter);
       };
-
-    return(
-        <>
-        <Header themeoptions={themeoptions}/>
-        <section className="hero-banner sub-banner pb-5">
-        <div className="container">
-            <div className="row justify-content-md-between justify-content-center align-items-center">
-                <div className="col-md-10" data-aos="fade" data-aos-delay="50">
-                    {blogBannerData.blogHeading &&(
-                        <div className="page-heading">{blogBannerData.blogHeading}</div>
-                    )}
-                    <h1>
-                        {blogBannerData.blogTextline1 &&(
-                          <span className="overflow-hidden d-inline-block">
-                            <span className="anim-gsap-1 d-inline-block">{blogBannerData.blogTextline1}</span>
-                          </span>  
+      return(
+            <>
+            <Header themeoptions={themeoptions}/>
+            <section className="hero-banner sub-banner pb-5">
+            <div className="container">
+                <div className="row justify-content-md-between justify-content-center align-items-center">
+                    <div className="col-md-10" data-aos="fade" data-aos-delay="50">
+                        {blogBannerData.blogHeading &&(
+                            <div className="page-heading">{blogBannerData.blogHeading}</div>
                         )}
-                        {blogBannerData.blogTextline2 &&(
+                        <h1>
+                            {blogBannerData.blogTextline1 &&(
                             <span className="overflow-hidden d-inline-block">
-                                <span className="anim-gsap-2 d-inline-block">{blogBannerData.blogTextline2}</span>
-                            </span> 
-                        )}
-                    </h1>
-                </div>
-                <div className="col-md-4">
-                    <div className="hero-img">
-                        <img src="assets/images/hero-shape.svg" alt="img"/>
+                                <span className="anim-gsap-1 d-inline-block">{blogBannerData.blogTextline1}</span>
+                            </span>  
+                            )}
+                            {blogBannerData.blogTextline2 &&(
+                                <span className="overflow-hidden d-inline-block">
+                                    <span className="anim-gsap-2 d-inline-block">{blogBannerData.blogTextline2}</span>
+                                </span> 
+                            )}
+                        </h1>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="hero-img">
+                            <img src="assets/images/hero-shape.svg" alt="img"/>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </section>
-        <section className="section-space light-bg">
-            <div className="container mix-box-filter">
-                <div className="row justify-content-between mb-lg-5 mb-4 mix-filter">
-                    <div className="col-lg-8">
-                        <ul>
-                            <li><a href="javascript:void(0)" className="filter" data-filter="all">All</a></li>
-                            <li><a href="javascript:void(0)" onClick={handleclick} className="filter" data-filter=".marketing">Finance</a></li>
-                            <li><a href="javascript:void(0)" onClick={handleclick} className="filter" data-filter=".business-tips">Java</a></li>
-                            <li><a href="javascript:void(0)" onClick={handleclick} className="filter" data-filter=".technology">Python</a></li>
-                            <li><a href="javascript:void(0)" onClick={handleclick} className="filter" data-filter=".technology">React</a></li>
-                        </ul>
+            </section>
+            <section className="section-space light-bg">
+                <div className="container mix-box-filter">
+                    <div className="row justify-content-between mb-lg-5 mb-4 mix-filter">
+                        <div className="col-lg-8">
+                            <ul>
+                                <li><a href="#" className="filter" data-filter="all">All</a></li>
+                                <li><a href="#" onClick={handleclick} className="filter" data-filter=".marketing">Finance</a></li>
+                                <li><a href="#" onClick={handleclick} className="filter" data-filter=".business-tips">Java</a></li>
+                                <li><a href="#" onClick={handleclick} className="filter" data-filter=".technology">Python</a></li>
+                                <li><a href="#" onClick={handleclick} className="filter" data-filter=".technology">React</a></li>
+                            </ul>
+                        </div>
+                        <div className="col-12 order-lg-0 order-1 d-sm-block d-none">
+                            <hr className="m-0"/>
+                        </div>
                     </div>
-                    <div className="col-12 order-lg-0 order-1 d-sm-block d-none">
-                        <hr className="m-0"/>
-                    </div>
-                </div>
-                <div className="row">
-                {blogData.map((blogsingle:any,index:any) => {
-                    console.log(blogsingle);
-                        const categories = blogsingle.categories.nodes;
-                        return (
-                                blogData.index == 1 ? (
-                                    <div className="col-lg-8 col-md-6 mb-3 mb-md-4 mix technology">
-                                    <div className="blog-block mw-100 sm-blog">
-                                        <div className="img-tag">
-                                            <img src="assets/images/blog1.webp" alt=""/>
-                                        </div>
-                                        <div className="info">
-                                            <div className="post">Web Development</div>
-                                            <a title="How to add Google authentication to your Next.js + Live app with NextAuth.js" href="#"><h3>How to add Google authentication to your Next.js + Live app with NextAuth.js</h3></a>
-                                            <p>Learn how to use NextAuth.js to integrate Google authentication with your Next.js + Liveblocks application—enabling personalization with users' names, photos, and more throughout your product.implementing Single Sign-On improves security by allowing users to bypass entering their password repeatedly.</p>
-                                            <div className="pt-2 mt-auto">
-                                                <a className="viewLink" href="#">Ream more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                ) : (
-                                    <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips">
-                                        <div className="blog-block sm-blog">
-                                            <div className="img-tag">
-                                                <img src={blogsingle.featuredImage.node.mediaItemUrl} alt=""/>
-                                            </div>
-                                            <div className="info">
-                                                {categories.map((categorySingle:any, index:any) => {
-                                                    return(
-                                                        <div className="post" key={index}>{categorySingle.name}
-                                                        </div>
-                                                    );
-                                                })}
-                                                <a title={blogsingle.title} href={blogsingle.link}><h3>{blogsingle.title}</h3></a>
-                                                <p dangerouslySetInnerHTML={{__html:blogsingle.content}} />
-                                                <div className="pt-2 mt-auto">
-                                                    <a className="viewLink" href={blogsingle.link}>Read more</a>
+                    <div className="row">
+                    {blogData.map((blogsingle:any,index:any) => {
+                        console.log(blogsingle);
+                            const categories = blogsingle.categories.nodes;
+                            return (
+                                    
+                                        <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
+                                            <div className="blog-block sm-blog">
+                                                <div className="img-tag">
+                                                    <img src={blogsingle.featuredImage.node.mediaItemUrl} alt=""/>
+                                                </div>
+                                                <div className="info">
+                                                    {categories.map((categorySingle:any, index:any) => {
+                                                        return(
+                                                            <div className="post" key={index}>{categorySingle.name}
+                                                            </div>
+                                                        );
+                                                    })}
+                                                    <a title={blogsingle.title} href={blogsingle.link}><h3>{blogsingle.title}</h3></a>
+                                                    <div dangerouslySetInnerHTML={{__html:blogsingle.content}} />
+                                                    <div className="pt-2 mt-auto">
+                                                        <a className="viewLink" href={blogsingle.link}>Read more</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                )
-                            )
-                        })}
-                    
-                </div>
-                    {filterBlogs &&(
-                        <div>
-                        {filterBlogs.map((item:any, index:any) => {
-                            return(
-                            <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
-                                <div className="blog-block sm-blog">
-                                    <div className="img-tag">
-                                        <img src="" alt=""/>
-                                    </div>
-                                    <div className="info">
-                                            <div className="post">Marketing</div>
-                                        <a title={item.node.title} href="#"><h3>{item.node.title}</h3></a>
+                                    )
+                            })}
+                    </div>
+                        {filterBlogs &&(
+                            <div>
+                            {filterBlogs.map((item:any, index:any) => {
+                                return(
+                                <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
+                                    <div className="blog-block sm-blog">
+                                        <div className="img-tag">
+                                            <img src="" alt=""/>
+                                        </div>
+                                        <div className="info">
+                                                <div className="post">Marketing</div>
+                                            <a title={item.node.title} href="#"><h3>{item.node.title}</h3></a>
+                                        </div>
                                     </div>
                                 </div>
+                                )
+                            })}
                             </div>
-                            )
-                        })}
-                        </div>
-                    )}
-            </div>
-        </section>
-        <Footer themeoptions={themeoptions}/>
-        </>
-    )
+                        )}
+                </div>
+            </section>
+            <Footer themeoptions={themeoptions}/>
+            </>
+      )
 }
 export async function getStaticProps() {
     const themeOptions = await GraphAPI.themeOptions();
