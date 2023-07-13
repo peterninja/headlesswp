@@ -101,7 +101,7 @@ export default class GraphAPI {
           date
           content
           link
-          categories{
+          terms{
             nodes{
               name
             }
@@ -162,19 +162,18 @@ export default class GraphAPI {
       posts(
         where: { categoryName:"${keyword}"}
       ) {
-        edges{
-          node{
-            title
-            content
-            featuredImage{
-              node{
-                mediaItemUrl
-              }
+        nodes{
+          id
+          title
+          content
+          featuredImage{
+            node{
+              mediaItemUrl
             }
-            terms{
-              nodes{
-                name
-              }
+          }
+          terms{
+            nodes{
+              name
             }
           }
         }
@@ -183,6 +182,28 @@ export default class GraphAPI {
     const graphqlQuery = {
       operationName: "blogFilter",
       query: blogFilter,
+    };
+    return axios({
+      url: baseURL,
+      method: "post",
+      headers: headers,
+      data: graphqlQuery,
+    });
+  }
+
+
+  static PostCategories(keyword:any) {
+    const PostCategories = `
+    query PostCategories {
+      terms {
+        nodes {
+          name
+        }
+      }
+    }`;
+    const graphqlQuery = {
+      operationName: "PostCategories",
+      query: PostCategories,
     };
     return axios({
       url: baseURL,

@@ -3,23 +3,26 @@ import Footer from '@/components/footer/Footer'
 import GraphAPI from '@/service/graphQL'
 import React, { useEffect, useState } from "react";
 
-export default function Blog({themeoptions,blogPage,blogListing,blogFilter}:any) {
-    console.log(blogFilter);
-    const blogBannerData = blogPage.pageBy.blog;
-    const blogData = blogListing.posts.nodes;
-    const [keyword, setKeyword] = useState(null);
-    const [filterBlogs, setFilterBlogs] = useState<any>(null);
-    console.log("dddss",filterBlogs);
-    const handleclick = async (event:any) => {
-        // console.log(event.target.text);
-        const elms = event.target.text;
-        event.preventDefault();
+export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostCategories}:any) {
+
+        const blogBannerData = blogPage.pageBy.blog;
+        // const blogData = blogListing.posts.nodes;
+        const allCategories = PostCategories.terms.nodes;
+        const [keyword, setKeyword] = useState(null);
+        const [filterBlogs, setFilterBlogs] = useState<any>(null);
+        // console.log(blogPage.pageBy.blog);
+        const [blogData, setBlogData] = useState<any>(blogListing.posts.nodes);
+        const handleclick = async (event:any) => {
+            event.preventDefault();
+            const elms = event.target.text;
             const filterBlog = (await GraphAPI.blogFilter(elms)).data.data;
-            console.log("test: ",filterBlog);
-            const catFilter = filterBlog.posts.edges;
+            const catFilter = filterBlog.posts.nodes;
             setFilterBlogs(catFilter);
-      };
-      return(
+            setBlogData(catFilter);
+        };
+        console.log("blog data",blogData);
+        console.log("filter data",filterBlogs);
+        return(
             <>
             <Header themeoptions={themeoptions}/>
             <section className="hero-banner sub-banner pb-5">
@@ -52,24 +55,38 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter}:any)
             </section>
             <section className="section-space light-bg">
                 <div className="container mix-box-filter">
+                    <div className="row">
+                        <div className="col-12 text-center">
+                            <form method="post">
+                            <div className="input_search">
+                                <span>
+                                    <img src="../images/search-interface-symbol.svg" alt="search" />
+                                    </span>
+                                    <input type="text" placeholder="Search..." />
+                                    </div>
+                                    </form>
+                         </div>
+                    </div>
                     <div className="row justify-content-between mb-lg-5 mb-4 mix-filter">
                         <div className="col-lg-8">
                             <ul>
                                 <li><a href="#" className="filter" data-filter="all">All</a></li>
-                                <li><a href="#" onClick={handleclick} className="filter" data-filter=".marketing">Finance</a></li>
-                                <li><a href="#" onClick={handleclick} className="filter" data-filter=".business-tips">Java</a></li>
-                                <li><a href="#" onClick={handleclick} className="filter" data-filter=".technology">Python</a></li>
-                                <li><a href="#" onClick={handleclick} className="filter" data-filter=".technology">React</a></li>
+                                {allCategories.map((term:any,index:any) => {
+                                    return(
+                                        <li key={index}><a href="#" onClick={handleclick} className="filter" data-filter=".marketing">{term.name}</a></li>
+                                    )
+                                })}
                             </ul>
                         </div>
                         <div className="col-12 order-lg-0 order-1 d-sm-block d-none">
                             <hr className="m-0"/>
                         </div>
                     </div>
+                    {blogData &&(
                     <div className="row">
                         {blogData.map((blogsingle:any,index:any) => {
-                            console.log(blogsingle);
-                                const categories = blogsingle.categories.nodes;
+                            // console.log(blogsingle);
+                                const categories = blogsingle.terms.nodes;
                                 return (
                                         <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
                                             <div className="blog-block sm-blog">
@@ -93,16 +110,15 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter}:any)
                                         </div>
                                         )
                             })}
-                    </div>
-                        {filterBlogs &&(
+                        {/* {filterBlogs &&(
                             <div>
                             {filterBlogs.map((item:any, index:any) => {
-                                const assignedcategories = item.node.terms.nodes;
+                                const assignedcategories = item.terms.nodes;
                                 return(
                                 <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
                                     <div className="blog-block sm-blog">
                                         <div className="img-tag">
-                                            <img src={item.node.featuredImage.node.mediaItemUrl} alt=""/>
+                                            <img src={item.featuredImage.node.mediaItemUrl} alt=""/>
                                         </div>
                                         {assignedcategories &&(
                                             <div className="info">
@@ -111,8 +127,8 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter}:any)
                                                         <div className="post" key={index}>{singlecat.name}</div>
                                                     )
                                                 })}
-                                                <a title={item.node.title} href="#"><h3>{item.node.title}</h3></a>
-                                                <div dangerouslySetInnerHTML={{__html:item.node.content}} />
+                                                <a title={item.title} href="#"><h3>{item.title}</h3></a>
+                                                <div dangerouslySetInnerHTML={{__html:item.content}} />
                                             </div>
                                         )}
                                     </div>
@@ -120,24 +136,28 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter}:any)
                                 )
                             })}
                             </div>
-                        )}
+                        )} */}
+                    </div>
+                    )}
                 </div>
             </section>
             <Footer themeoptions={themeoptions}/>
             </>
-      )
+        )
 }
 export async function getStaticProps() {
     const themeOptions = await GraphAPI.themeOptions();
     const blogPage = await GraphAPI.blogPage();
     const blogListing = await GraphAPI.blogListing();
-    const blogFilter = await GraphAPI.blogFilter("s");
+    // const blogFilter = await GraphAPI.blogFilter("s");
+    const PostCategories = await GraphAPI.PostCategories("s");
     return {
         props: {
             themeoptions: themeOptions.data.data,
             blogPage: blogPage.data.data,
             blogListing: blogListing.data.data,
-            blogFilter: blogFilter.data.data
+            // blogFilter: blogFilter.data.data,
+            PostCategories: PostCategories.data.data
         }
     }
 }
