@@ -165,6 +165,17 @@ export default class GraphAPI {
         edges{
           node{
             title
+            content
+            featuredImage{
+              node{
+                mediaItemUrl
+              }
+            }
+            terms{
+              nodes{
+                name
+              }
+            }
           }
         }
       }

@@ -67,11 +67,10 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter}:any)
                         </div>
                     </div>
                     <div className="row">
-                    {blogData.map((blogsingle:any,index:any) => {
-                        console.log(blogsingle);
-                            const categories = blogsingle.categories.nodes;
-                            return (
-                                    
+                        {blogData.map((blogsingle:any,index:any) => {
+                            console.log(blogsingle);
+                                const categories = blogsingle.categories.nodes;
+                                return (
                                         <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
                                             <div className="blog-block sm-blog">
                                                 <div className="img-tag">
@@ -92,22 +91,30 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter}:any)
                                                 </div>
                                             </div>
                                         </div>
-                                    )
+                                        )
                             })}
                     </div>
                         {filterBlogs &&(
                             <div>
                             {filterBlogs.map((item:any, index:any) => {
+                                const assignedcategories = item.node.terms.nodes;
                                 return(
                                 <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
                                     <div className="blog-block sm-blog">
                                         <div className="img-tag">
-                                            <img src="" alt=""/>
+                                            <img src={item.node.featuredImage.node.mediaItemUrl} alt=""/>
                                         </div>
-                                        <div className="info">
-                                                <div className="post">Marketing</div>
-                                            <a title={item.node.title} href="#"><h3>{item.node.title}</h3></a>
-                                        </div>
+                                        {assignedcategories &&(
+                                            <div className="info">
+                                            {assignedcategories.map((singlecat:any, index:any) => {
+                                                return(
+                                                        <div className="post" key={index}>{singlecat.name}</div>
+                                                    )
+                                                })}
+                                                <a title={item.node.title} href="#"><h3>{item.node.title}</h3></a>
+                                                <div dangerouslySetInnerHTML={{__html:item.node.content}} />
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                                 )
