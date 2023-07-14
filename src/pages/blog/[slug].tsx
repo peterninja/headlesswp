@@ -10,11 +10,11 @@ function BlogDetails() {
   }
   export default BlogDetails;
 
-  export async function getStaticPaths() {
-    const blogPosts = await GraphAPI.blogListing();
-    const paths = blogPosts.data.data.posts.nodes.map((item:any,index:any) => {
-      const params = { slug: item.slug };
-      return { params };
-    });
-    return { paths, fallback: true };
-  }
+  // export async function getStaticPaths() {
+  //   const blogPosts = await GraphAPI.blogListing();
+  //   const paths = blogPosts.data.data.posts.nodes.map((item:any,index:any) => {
+  //     const params = { slug: item.slug };
+  //     return { params };
+  //   });
+  //   return { paths, fallback: true };
+  // }
