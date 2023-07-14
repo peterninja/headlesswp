@@ -6,7 +6,6 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostCategories,blogSearch}:any) {
-
         const blogBannerData = blogPage.pageBy.blog;
         // const blogData = blogListing.posts.nodes;
         const allCategories = PostCategories.terms.nodes;
@@ -17,7 +16,7 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
         const handleclick = async (event:any) => {
             event.preventDefault();
             const elms = event.target.text;
-            console.log(elms);
+            // console.log(elms);
             if(elms == "All"){
                 const filterBlog = (await GraphAPI.blogListing()).data.data;
                 const catFilter = filterBlog.posts.nodes;
@@ -30,7 +29,6 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
                 setBlogData(catFilter);
             }
         };
-
         const handleInputChange = (event:any) => {
             console.log(event.target.value);
             if (event.target.value !== "") {
@@ -40,9 +38,7 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
               setSearchFlag(false);
             }
         };
-
         const handleSearchSubmit = async (event:any) => {
-            
             event.preventDefault();
             // const elms = event.target.text;
             // console.log(event.target.value);
@@ -51,12 +47,12 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
             const blogSearchData = blogSearchk.posts.nodes
                 setBlogData(blogSearchData);
             } else {
-                setBlogData(null);
+                setBlogData(blogListing.posts.nodes);
             }
         };
         // console.log("kk",searchBlogs);
-        console.log("blog datasss",blogData);
-        console.log("filter data",filterBlogs);
+        // console.log("blog datasss",blogData);
+        // console.log("filter data",filterBlogs);
         return(
             <>
             <Header themeoptions={themeoptions}/>
@@ -118,62 +114,62 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
                         </div>
                     </div>
                     {blogData &&(
-                    <div className="row">
-                        {blogData.map((blogsingle:any,index:any) => {
-                            // console.log(blogsingle);
-                                const categories = blogsingle.terms.nodes;
-                                return (
-                                        <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
-                                            <div className="blog-block sm-blog">
-                                                <div className="img-tag">
-                                                    <img src={blogsingle.featuredImage.node.mediaItemUrl} alt=""/>
-                                                </div>
-                                                <div className="info">
-                                                    {categories.map((categorySingle:any, index:any) => {
-                                                        return(
-                                                            <div className="post" key={index}>{categorySingle.name}
-                                                            </div>
-                                                        );
-                                                    })}
-                                                    <a title={blogsingle.title} href={blogsingle.link}><h3>{blogsingle.title}</h3></a>
-                                                    <div dangerouslySetInnerHTML={{__html:blogsingle.content}} />
-                                                    <div className="pt-2 mt-auto">
-                                                    <Link className="viewLink" href={`/blog/${blogsingle.slug}`} >Read More</Link>
-                                                        {/* <a  href={blogsingle.slug}>Read more</a> */}
+                        <div className="row">
+                            {blogData.map((blogsingle:any,index:any) => {
+                                // console.log(blogsingle);
+                                    const categories = blogsingle.terms.nodes;
+                                    return (
+                                            <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
+                                                <div className="blog-block sm-blog">
+                                                    <div className="img-tag">
+                                                        <img src={blogsingle.featuredImage.node.mediaItemUrl} alt=""/>
+                                                    </div>
+                                                    <div className="info">
+                                                        {categories.map((categorySingle:any, index:any) => {
+                                                            return(
+                                                                <div className="post" key={index}>{categorySingle.name}
+                                                                </div>
+                                                            );
+                                                        })}
+                                                        <a title={blogsingle.title} href={blogsingle.link}><h3>{blogsingle.title}</h3></a>
+                                                        <div dangerouslySetInnerHTML={{__html:blogsingle.content}} />
+                                                        <div className="pt-2 mt-auto">
+                                                        <Link className="viewLink" href={`/blog/${blogsingle.slug}`} >Read More</Link>
+                                                            {/* <a  href={blogsingle.slug}>Read more</a> */}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        )
-                            })}
-                        {/* {filterBlogs &&(
-                            <div>
-                            {filterBlogs.map((item:any, index:any) => {
-                                const assignedcategories = item.terms.nodes;
-                                return(
-                                <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
-                                    <div className="blog-block sm-blog">
-                                        <div className="img-tag">
-                                            <img src={item.featuredImage.node.mediaItemUrl} alt=""/>
-                                        </div>
-                                        {assignedcategories &&(
-                                            <div className="info">
-                                            {assignedcategories.map((singlecat:any, index:any) => {
-                                                return(
-                                                        <div className="post" key={index}>{singlecat.name}</div>
-                                                    )
-                                                })}
-                                                <a title={item.title} href="#"><h3>{item.title}</h3></a>
-                                                <div dangerouslySetInnerHTML={{__html:item.content}} />
+                                            )
+                                })}
+                            {/* {filterBlogs &&(
+                                <div>
+                                {filterBlogs.map((item:any, index:any) => {
+                                    const assignedcategories = item.terms.nodes;
+                                    return(
+                                    <div className="col-lg-4 col-md-6 mb-3 mb-md-4 mix marketing business-tips" key={index}>
+                                        <div className="blog-block sm-blog">
+                                            <div className="img-tag">
+                                                <img src={item.featuredImage.node.mediaItemUrl} alt=""/>
                                             </div>
-                                        )}
+                                            {assignedcategories &&(
+                                                <div className="info">
+                                                {assignedcategories.map((singlecat:any, index:any) => {
+                                                    return(
+                                                            <div className="post" key={index}>{singlecat.name}</div>
+                                                        )
+                                                    })}
+                                                    <a title={item.title} href="#"><h3>{item.title}</h3></a>
+                                                    <div dangerouslySetInnerHTML={{__html:item.content}} />
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
+                                    )
+                                })}
                                 </div>
-                                )
-                            })}
-                            </div>
-                        )} */}
-                    </div>
+                            )} */}
+                        </div>
                     )}
                 </div>
             </section>
@@ -181,7 +177,6 @@ export default function Blog({themeoptions,blogPage,blogListing,blogFilter,PostC
             </>
         )
 }
-
 
 // export async function getStaticPaths() {
 //     // const blogPosts = await GraphAPI.blogPostListing();
