@@ -193,7 +193,7 @@ export async function getStaticProps() {
     const blogListing = await GraphAPI.blogListing();
     const blogSearch = await GraphAPI.blogSearch("s");
     // const blogFilter = await GraphAPI.blogFilter("s");
-    const PostCategories = await GraphAPI.PostCategories("s");
+    const PostCategories = await GraphAPI.PostCategories();
     return {
         props: {
             themeoptions: themeOptions.data.data,

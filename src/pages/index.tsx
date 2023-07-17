@@ -104,7 +104,7 @@ export default function Home({themeoptions,homepagedata}:any) {
                         <div className="who-we-info secondary-light-bg">
                             <h2 data-aos="fade-up">{homedata.wHeading}</h2>
                             <h3 data-aos="fade-up">{homedata.wSubHeading}</h3>
-                            <p dangerouslySetInnerHTML={{__html:homedata.wDescription}} />
+                            <div dangerouslySetInnerHTML={{__html:homedata.wDescription}} />
                         </div>
                     </div>
                     <div className="col-xl-3 col-lg-4">

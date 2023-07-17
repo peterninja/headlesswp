@@ -156,7 +156,6 @@ export default class GraphAPI {
     });
   }
 
-
   static blogFilter(keyword:any) {
     const blogFilter = `
     query blogFilter{
@@ -191,7 +190,6 @@ export default class GraphAPI {
       data: graphqlQuery,
     });
   }
-
 
   static blogSearch(keyword:any) {
     const blogSearch = `
@@ -228,8 +226,7 @@ export default class GraphAPI {
     });
   }
 
-
-  static PostCategories(keyword:any) {
+  static PostCategories() {
     const PostCategories = `
     query PostCategories {
       terms {
@@ -249,4 +246,52 @@ export default class GraphAPI {
       data: graphqlQuery,
     });
   }
+
+  static singlePostSettings({params}:any) {
+      const singlePostSettingsQuery = `
+        query SinglePostSettingsQuery {
+          postBy(slug: "${params.slug}") {
+                postId
+                slug
+                title
+                date
+                content
+                featuredImage {
+                  node {
+                    sourceUrl
+                  }
+                }
+                categories {
+                  nodes {
+                    categoryId
+                    name
+                  }
+                }
+                tags {
+                  nodes {
+                    name
+                  }
+                }
+          }
+        }
+      `;
+
+      const graphqlQuery = {
+        operationName: "SinglePostSettingsQuery",
+        query: singlePostSettingsQuery,
+      };
+      console.log("test",axios({
+        url: baseURL,
+        method: "post",
+        headers: headers,
+        data: graphqlQuery,
+      }));
+      return axios({
+        url: baseURL,
+        method: "post",
+        headers: headers,
+        data: graphqlQuery,
+      });
+  }
+
 }

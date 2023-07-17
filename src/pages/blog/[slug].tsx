@@ -1,20 +1,35 @@
 import { useRouter } from "next/router";
 import GraphAPI from "@/service/graphQL";
 import React, { useEffect, useState } from "react";
+import BlogDetail from "../../components/blogDetail/blogDetail";
 
 
-function BlogDetails() {
-    return (
-      <h3>Blog Detail</h3>
-    );
+function BlogDetails({blogDetail}:any) {
+  const router = useRouter();
+      return (
+        <BlogDetail blogDetail={blogDetail} />
+      );
   }
   export default BlogDetails;
 
-  // export async function getStaticPaths() {
-  //   const blogPosts = await GraphAPI.blogListing();
-  //   const paths = blogPosts.data.data.posts.nodes.map((item:any,index:any) => {
-  //     const params = { slug: item.slug };
-  //     return { params };
-  //   });
-  //   return { paths, fallback: true };
-  // }
+  export const getStaticPaths = async () => {
+    const res = await GraphAPI.blogListing();
+    const paths = res.data.data.posts.nodes.map((item:any,index:any) => {
+      const params = { slug: item.slug };
+      return { params };
+    });
+    return {
+      paths,
+      fallback: false
+    }
+  }
+
+  export const getStaticProps = async ({params}:any) => {
+    const blogDetail = await GraphAPI.singlePostSettings({params});
+    const blogDetailData = blogDetail.data.data.postBy;
+    return {
+      props: {
+        blogDetail: blogDetailData,
+      },
+    };
+  }
