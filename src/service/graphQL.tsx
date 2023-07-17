@@ -166,6 +166,7 @@ export default class GraphAPI {
           id
           title
           content
+          slug
           featuredImage{
             node{
               mediaItemUrl
@@ -201,6 +202,7 @@ export default class GraphAPI {
           id
           title
           content
+          slug
           featuredImage{
             node{
               mediaItemUrl
